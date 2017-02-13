@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="287fba0c-ecb8-456e-a7b1-d7fbc9e9f4bd" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DesignDocuments- Ref/Screens.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DesignDocuments- Ref/applicationFlow.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DesignDocuments- Ref/databaseDiagram.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DesignDocuments- Ref/wireframes/1-Reports.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DesignDocuments- Ref/wireframes/2-NewReport.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DesignDocuments- Ref/wireframes/3-NewTrail.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DesignDocuments- Ref/wireframes/4-Trail.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DesignDocuments- Ref/wireframes/5-Search-Results.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DesignDocuments- Ref/wireframes/6-Sign-In.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DesignDocuments- Ref/wireframes/7-SignUp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DesignDocuments- Ref/wireframes/8-About.png" afterPath="" />
-    </list>
+    <list default="true" id="287fba0c-ecb8-456e-a7b1-d7fbc9e9f4bd" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -52,8 +40,8 @@
       <file leaf-file-name="CreateUser.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/controller/CreateUser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="16" column="19" lean-forward="true" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+            <state relative-caret-position="162">
+              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -644,12 +632,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1487017733257</updated>
-      <workItem from="1487017741212" duration="7895000" />
+      <workItem from="1487017741212" duration="8404000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7895000" />
+    <option name="totallyTimeSpent" value="8404000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="215" y="52" width="1278" height="788" extended-state="0" />
@@ -859,8 +847,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/controller/CreateUser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="16" column="19" lean-forward="true" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+        <state relative-caret-position="162">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
         </state>
       </provider>
