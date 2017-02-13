@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="287fba0c-ecb8-456e-a7b1-d7fbc9e9f4bd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/matc/entity/Sponsor.java" afterPath="$PROJECT_DIR$/src/main/java/edu/matc/entity/Sponsor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/matc/persistence/SponsorDAO.java" afterPath="$PROJECT_DIR$/src/main/java/edu/matc/persistence/SponsorDAO.java" />
-    </list>
+    <list default="true" id="287fba0c-ecb8-456e-a7b1-d7fbc9e9f4bd" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,8 +50,8 @@
       <file leaf-file-name="SponsorDAO.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/persistence/SponsorDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-954">
-              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+            <state relative-caret-position="144">
+              <caret line="70" column="5" lean-forward="true" selection-start-line="69" selection-start-column="19" selection-end-line="70" selection-end-column="5" />
               <folding>
                 <element signature="e#589#598#0" expanded="true" />
               </folding>
@@ -598,12 +595,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1487017733257</updated>
-      <workItem from="1487017741212" duration="6379000" />
+      <workItem from="1487017741212" duration="6760000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6379000" />
+    <option name="totallyTimeSpent" value="6760000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="566" y="143" width="1278" height="788" extended-state="0" />
@@ -779,8 +776,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/persistence/SponsorDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-954">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        <state relative-caret-position="144">
+          <caret line="70" column="5" lean-forward="true" selection-start-line="69" selection-start-column="19" selection-end-line="70" selection-end-column="5" />
           <folding>
             <element signature="e#589#598#0" expanded="true" />
           </folding>
