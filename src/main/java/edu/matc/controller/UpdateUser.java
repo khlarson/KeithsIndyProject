@@ -34,7 +34,7 @@ public class UpdateUser extends HttpServlet {
 
         //TODO will need to add param to update user
         req.setAttribute("users", userData.updateUser());
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/results.jsp");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/userSearchResults.jsp");
         dispatcher.forward(req, resp);
     }
 }

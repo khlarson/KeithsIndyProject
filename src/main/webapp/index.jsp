@@ -1,17 +1,12 @@
-<%@include file="head.jsp"%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
+<head>
+    <title>Admin login prompt</title>
+</head>
 <body>
-<h2>User Display Exercise - Week 1</h2>
-<form action="searchUser" method="get">
-    <select name="inputType">
-        <option value="1">Search All Users</option>
-        <option value="firstName">Search by first Name</option>
-        <option value="lastName">Search by last Name</option>
-    </select>
-    <input type="text" name="userInput"><br>
-    <input type="submit" value="Submit">
-</form>
-<br>
-
+<ul>
+    <li><a href="adminrestricted/admin.jsp">Take me to the Admin Page</a></li>
+    <li><a href="display.jsp">Take me to the Display Page</a></li>
+</ul>
 </body>
 </html>

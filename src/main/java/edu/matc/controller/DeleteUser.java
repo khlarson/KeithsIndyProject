@@ -34,7 +34,7 @@ public class DeleteUser extends HttpServlet {
 
         //TODO will need to add deleteuser param
         req.setAttribute("users", userData.deleteUser());
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/results.jsp");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/userSearchResults.jsp");
         dispatcher.forward(req, resp);
     }
 }

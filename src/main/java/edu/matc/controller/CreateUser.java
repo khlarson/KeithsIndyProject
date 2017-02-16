@@ -34,7 +34,7 @@ public class CreateUser extends HttpServlet {
 
         //TODO will need to add addUser param
         req.setAttribute("users", userData.addUser());
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/results.jsp");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/userSearchResults.jsp");
         dispatcher.forward(req, resp);
     }
 }

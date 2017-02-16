@@ -32,7 +32,7 @@ public class ReceiveUser extends HttpServlet {
         logger.warn("In the doGet() - This is a warning");
         UserDao userData = new UserDao();
         req.setAttribute("users", userData.getAllUsers());
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/results.jsp");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/userSearchResults.jsp");
         dispatcher.forward(req, resp);
     }
 }
