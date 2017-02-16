@@ -1,1 +1,4 @@
 in session (isUserInRole) declare in jsp
+
+in web xml lock down both jsp's and servlets
+

@@ -18,7 +18,7 @@ import java.io.IOException;
  */
 
 @WebServlet(
-        urlPatterns = {"/receiveUser"}
+        urlPatterns = {"/ADMINreceiveUser"}
 )
 
 public class ReceiveUser extends HttpServlet {

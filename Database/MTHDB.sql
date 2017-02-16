@@ -15,7 +15,7 @@
 CREATE DATABASE MTH;
 USE DATABASE MTH;
 
-User(
+create table User (
    User_id INT NOT NULL AUTO_INCREMENT,
    UserName VARCHAR(15) NOT NULL,
    FirstName VARCHAR(20) NOT NULL,
@@ -25,13 +25,47 @@ User(
    PRIMARY KEY ( User_id )
 );
 
-Password(
+create table Password (
    Password_id INT NOT NULL AUTO_INCREMENT,
    Password VARCHAR(15) NOT NULL,
    PRIMARY KEY ( Password_id )
 );
 
-Sponsor(
+
+--table to edit roles
+
+CREATE USER 'tomcat'@'localhost' IDENTIFIED BY 'tomcat';
+
+create table user_roles (
+User_id         varchar(15) not null,
+role_name         varchar(15) not null,
+primary key (user_name, role_name)
+);
+
+GRANT SELECT ON sample.* TO 'tomcat'@'localhost';
+
+insert into users values ('admin', 'admin');
+// TODO: Based on the requirements, what other user/s do you need to 
+add?
+
+insert into user_roles values ('admin', 'administrator');
+// TODO: Based on the requirements, what other role/s do you need to add?
+
+
+--add the following to server.xml, add into host tag 				--will need to edit all local changes on aws
+<Realm className="org.apache.catalina.realm.JDBCRealm"
+    driverName="com.mysql.jdbc.Driver"
+    connectionURL="jdbc:mysql://localhost:3306/MTH?user=tomcat&amp;password=tomcat"
+    userTable="User" userNameCol="userID" userCredCol="user_pass"
+    userRoleTable="user_roles" roleNameCol="role_name"/>
+    //TODO: Make sure this configuration information is consistent with your database/table details
+
+
+
+--done with security
+
+
+create table Sponsor (
    Sponsor_id INT NOT NULL AUTO_INCREMENT,
    Photo_id INT(20),				--REFERENCE ISSUES LIST AT TOP {ISSUE 4}
    Name VARCHAR(20) NOT NULL,
@@ -40,7 +74,7 @@ Sponsor(
    PRIMARY KEY ( Sponsor_id )
 );
 
-Location(
+create table Location (
    Location_id INT NOT NULL AUTO_INCREMENT,
    name VARCHAR(20) NOT NULL,
    description VARCHAR(200) NOT NULL,
@@ -48,7 +82,7 @@ Location(
    PRIMARY KEY ( Location_id )
 );
 
-Trip(
+create table Trip (
    Trip_id INT NOT NULL AUTO_INCREMENT,
    Name VARCHAR(20) NOT NULL,
    Description VARCHAR(200) NOT NULL,
@@ -57,21 +91,21 @@ Trip(
    PRIMARY KEY ( tutorial_id )
 );
 
-UserTrip(
+create table UserTrip (
    UserTrip_id INT NOT NULL AUTO_INCREMENT,
    Trip_id INT(20),				--REFERENCE ISSUES LIST AT TOP {ISSUE 4}
    User_id INT(20),				--REFERENCE ISSUES LIST AT TOP {ISSUE 4}
    PRIMARY KEY ( Trip_id )
 );
 
-TripLocation(
+create table TripLocation (
    TripLocation_id INT NOT NULL AUTO_INCREMENT,
    Trip_id INT(20),				--REFERENCE ISSUES LIST AT TOP {ISSUE 4}
    Location_id INT(20),				--REFERENCE ISSUES LIST AT TOP {ISSUE 4}
    PRIMARY KEY ( TripLocation_id )
 );
 
-Msgs(
+create table Msgs (
    Msg_id INT NOT NULL AUTO_INCREMENT,
    msg_Content VARCHAR(200) NOT NULL,
    tag VARCHAR(20) NOT NULL,
@@ -79,14 +113,14 @@ Msgs(
    PRIMARY KEY ( Msg_id )
 );
 
-UserMsgs(
+create table UserMsgs (
    UserMsgs_id INT NOT NULL AUTO_INCREMENT,
    Msg_id INT(20),				--REFERENCE ISSUES LIST AT TOP {ISSUE 4}
    User_id INT(20),				--REFERENCE ISSUES LIST AT TOP {ISSUE 4}
    PRIMARY KEY ( UserMsgs_id )
 );
 
-Photo(
+create table Photo (
    Photo_id INT NOT NULL AUTO_INCREMENT,
    Name VARCHAR(20) NOT NULL,
    Tag VARCHAR(20) NOT NULL,
@@ -97,14 +131,14 @@ Photo(
    PRIMARY KEY ( photo_id )
 );
 
-UserPhoto(
+create table UserPhoto (
    UserPhoto_id INT NOT NULL AUTO_INCREMENT,
    Photo_id INT(20),				--REFERENCE ISSUES LIST AT TOP {ISSUE 4}
    User_id INT(20),				--REFERENCE ISSUES LIST AT TOP {ISSUE 4}
    PRIMARY KEY ( UserPhoto_id )
 );
 
-TripPhoto(
+create table TripPhoto (
    TripPhoto_id INT NOT NULL AUTO_INCREMENT,
    Photo_id INT(20),				--REFERENCE ISSUES LIST AT TOP {ISSUE 4}
    Trip_id INT(20),				--REFERENCE ISSUES LIST AT TOP {ISSUE 4}

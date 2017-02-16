@@ -1,8 +1,9 @@
-<%@include file="../head.jsp"%>
-<html>
-<body>
-<h2>Mad Town Hopper Search Users</h2>
-<form action="searchUser" method="get">
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+//will include adminUsers.jsp
+
+
+<form action="ADMINreceiveUser" method="get">
     <select name="inputType">
         <option value="1">Search All Users</option>
         <option value="firstName">Search by first Name</option>
@@ -13,5 +14,5 @@
 </form>
 <br>
 
-</body>
-</html>
+//upon submitting, search results will show here
+//do this by either includes or something
