@@ -21,14 +21,9 @@ create table User (
    FirstName VARCHAR(20) NOT NULL,
    LastName VARCHAR(20) NOT NULL,
    Email VARCHAR(20) NOT NULL,
+   Password VARCHAR(15) NOT NULL,
    Submission_date DATE,
    PRIMARY KEY ( User_id )
-);
-
-create table Password (
-   Password_id INT NOT NULL AUTO_INCREMENT,
-   Password VARCHAR(15) NOT NULL,
-   PRIMARY KEY ( Password_id )
 );
 
 
@@ -41,6 +36,20 @@ User_id         varchar(15) not null,
 role_name         varchar(15) not null,
 primary key (user_name, role_name)
 );
+
+--roles to have 
+	--admin
+		--(can delete and search users. {LOCK DOWN}
+		--(can do full crud for AdminTrips. {LOCK DOWN}
+		--(can delete and search user trips. {LOCK DOWN}
+		--(can do full crud for Locations.{LOCK DOWN}
+		--(can do full crud for Sponsors.{LOCK DOWN}
+		--(can do full crud for Msgs.{LOCK DOWN}
+		--(full crud on work scedule
+	--staff
+		--(View work scedule and staffchat {msgs subtag}
+
+
 
 GRANT SELECT ON sample.* TO 'tomcat'@'localhost';
 
@@ -82,20 +91,29 @@ create table Location (
    PRIMARY KEY ( Location_id )
 );
 
+create table AdminTrip (
+   AdminTrip_id INT NOT NULL AUTO_INCREMENT,
+   Name VARCHAR(20) NOT NULL,
+   Description VARCHAR(200) NOT NULL,
+   tag VARCHAR(20) NOT NULL,
+   ApproxamateTime TIME,			--REFERENCE ISSUES LIST AT TOP {ISSUE 4}
+   PRIMARY KEY ( AdminTrip_id )
+); 
+
 create table Trip (
    Trip_id INT NOT NULL AUTO_INCREMENT,
    Name VARCHAR(20) NOT NULL,
    Description VARCHAR(200) NOT NULL,
    tag VARCHAR(20) NOT NULL,
    ApproxamateTime TIME,			--REFERENCE ISSUES LIST AT TOP {ISSUE 3}
-   PRIMARY KEY ( tutorial_id )
+   PRIMARY KEY ( Trip_id )
 );
 
 create table UserTrip (
    UserTrip_id INT NOT NULL AUTO_INCREMENT,
    Trip_id INT(20),				--REFERENCE ISSUES LIST AT TOP {ISSUE 4}
    User_id INT(20),				--REFERENCE ISSUES LIST AT TOP {ISSUE 4}
-   PRIMARY KEY ( Trip_id )
+   PRIMARY KEY ( UserTrip_id )
 );
 
 create table TripLocation (
@@ -106,18 +124,21 @@ create table TripLocation (
 );
 
 create table Msgs (
-   Msg_id INT NOT NULL AUTO_INCREMENT,
-   msg_Content VARCHAR(200) NOT NULL,
+   Msgid INT NOT NULL AUTO_INCREMENT,
+   User_id INT(20),
+   content VARCHAR(200) NOT NULL,
    tag VARCHAR(20) NOT NULL,
    submission_date DATE,
-   PRIMARY KEY ( Msg_id )
+   PRIMARY KEY ( Msgid )
 );
 
-create table UserMsgs (
-   UserMsgs_id INT NOT NULL AUTO_INCREMENT,
-   Msg_id INT(20),				--REFERENCE ISSUES LIST AT TOP {ISSUE 4}
-   User_id INT(20),				--REFERENCE ISSUES LIST AT TOP {ISSUE 4}
-   PRIMARY KEY ( UserMsgs_id )
+create table AdminMsgs (
+   Msgid INT NOT NULL AUTO_INCREMENT,
+   User_id INT(20),
+   content VARCHAR(200) NOT NULL,
+   tag VARCHAR(20) NOT NULL,
+   submission_date DATE,
+   PRIMARY KEY ( Msgid )
 );
 
 create table Photo (

@@ -1,9 +1,16 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@include file="../../head.jsp"%>
+<body>
+//should show along the left hand side
+//upon click, the following pages will load on the right side of the screen
 
-//will include adminTrips.jsp
+<h2>Trips</h2>
+<ul>
+    <li><a href="adminHopperEvents.jsp">Admin Events</a></li>
+    <li><a href="adminTripRequest.jsp">Event Request</a></li>
+    <li><a href="/../admin.jsp">Back to Admin Homepage</a></li>
+</ul>
+<br>
 
-//page will search for a user and then "ask are you sure"
-<form action="ADMINdeleteTrip" method="get">
-    Delete Trip: <input type="text" name="userInput"><br>
-    <input type="submit" value="Submit">
-</form>
+
+</body>
+</html>

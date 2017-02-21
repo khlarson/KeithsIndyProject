@@ -17,21 +17,26 @@ import static java.time.LocalDate.now;
 @Entity
 @Table(name = "users")
 public class User {
-    @Column(name = "first_name")
-    private String firstName;
-
-    @Column(name="last_name")
-    private String lastName;
-
     @Id
     @GeneratedValue(generator="increment")
     @GenericGenerator(name="increment", strategy = "increment")
     @Column(name = "id")
     private int userid;
 
-    @Column(name = "date_of_birth")
-    @Convert(converter = LocalDateAttributeConverter.class)
-    private LocalDate dateOfBirth;
+    @Column(name = "userName")
+    private String userName;
+
+    @Column(name = "firstName")
+    private String firstName;
+
+    @Column(name="lastName")
+    private String lastName;
+
+    @Column(name="email")
+    private String email;
+
+    @Column(name="password")
+    private String password;
 
     /**
      * Instantiates a new User.
@@ -44,32 +49,36 @@ public class User {
      *
      * @param firstName   the first name
      * @param lastName    the last name
+     * @param userName    the username
+     * @param email    the email
+     * @param password    the password
      * @param userid      the userid
-     * @param dateOfBirth the date of birth
      */
-    public User(String firstName, String lastName, int userid, LocalDate dateOfBirth) {
+    public User(int userid, String userName, String firstName, String lastName, String email, String password) {
+        this.userid = userid;
+        this.userName = userName;
         this.firstName = firstName;
         this.lastName = lastName;
-        this.userid = userid;
-        this.dateOfBirth = dateOfBirth;
+        this.email = email;
+        this.password = password;
     }
 
     /**
-     * Gets date of birth.
+     * Gets username.
      *
-     * @return the date of birth
+     * @return the userName
      */
-    public LocalDate getDateOfBirth() {
-        return dateOfBirth;
+    public String getUserName() {
+        return username;
     }
 
     /**
-     * Sets date of birth.
+     * Sets userName.
      *
-     * @param dateOfBirth the date of birth
+     * @param userName the username
      */
-    public void setDateOfBirth(LocalDate dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     /**
@@ -124,5 +133,41 @@ public class User {
      */
     public void setUserid(int userid) {
         this.userid = userid;
+    }
+
+    /**
+     * Gets email
+     *
+     * @return the email
+     */
+    public String getEmail() {
+        return email;
+    }
+
+    /**
+     * Sets email
+     *
+     * @param email the email
+     */
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    /**
+     * Gets password
+     *
+     * @return the password
+     */
+    public String getPassword() {
+        return password;
+    }
+
+    /**
+     * Sets email
+     *
+     * @param email the email
+     */
+    public void setPassword(String password) {
+        this.password = password;
     }
 }

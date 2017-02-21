@@ -18,37 +18,35 @@ import java.io.IOException;
  */
 
 @WebServlet(
-        urlPatterns = {"/ADMINdeleteUser"}
+        urlPatterns = {"/USERdeleteMsg"}
 )
 
-public class DeleteUser extends HttpServlet {
+public class DeleteMsg extends HttpServlet {
 
     private final Logger logger = Logger.getLogger(this.getClass());
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        logger.info("In the doGet()");
-        logger.warn("In the doGet() - This is a warning");
-
-
-        UserDao userDao = new UserDao();
+        MsgsDao msgDao = new MsgsDao();
 
         comfirmDelete = req.getParameter("comfirmDelete");
 
+        //add in a conditional to test if user wanting to exicute the delete is the user who posted it or admin
+
         if (comfirmDelete.equals("Conrfim")) {
-            logger.info("USER DELETE CONFIRMED");
+            logger.info("MSG DELETE CONFIRMED");
             req.setAttribute("users", userDao.deleteUser(req.getParameter("userInput")));
-            RequestDispatcher dispatcher = req.getRequestDispatcher("/adminUserDeleteSuccess.jsp");
+            RequestDispatcher dispatcher = req.getRequestDispatcher("/userMsgDeleteSuccess.jsp");
             dispatcher.forward(req, resp);
         } else if (comfirmDelete.equals("?")) {
-            logger.info("USER DELETE AWAITING CONFORMATION");
+            logger.info("MSG DELETE AWAITING CONFORMATION");
             req.setAttribute("users", userDao.getUser(req.getParameter("userInput")));
-            RequestDispatcher dispatcher = req.getRequestDispatcher("/adminUserConfimDelete.jsp");
+            RequestDispatcher dispatcher = req.getRequestDispatcher("/userMsgConfimDelete.jsp");
             dispatcher.forward(req, resp);
         } else {
-            logger.info("USER DELETE ABORTED");
-            RequestDispatcher dispatcher = req.getRequestDispatcher("/adminUserAbortDelete.jsp");
+            logger.info("MSG DELETE ABORTED");
+            RequestDispatcher dispatcher = req.getRequestDispatcher("/userMsgAbortDelete.jsp");
             dispatcher.forward(req, resp);
         }
     }

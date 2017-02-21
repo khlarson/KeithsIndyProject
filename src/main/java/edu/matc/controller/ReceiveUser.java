@@ -29,9 +29,20 @@ public class ReceiveUser extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         logger.info("In the doGet()");
-        logger.warn("In the doGet() - This is a warning");
-        UserDao userData = new UserDao();
-        req.setAttribute("users", userData.getAllUsers());
+
+        UserDao userDao = new UserDao();
+
+        String inputType = req.getParameter("inputType");
+        String userInput = req.getParameter("userInput");
+
+        if (inputType.equals("searchid")) {
+            logger.info("SEARCH USER BY ID INITIALIZED");
+            req.setAttribute("users", userDao.getUser(userInput));
+        } else {
+            logger.info("SEARCH ALL USERS INITIALIZED");
+            req.setAttribute("users", userDao.getAllUsers());
+        }
+
         RequestDispatcher dispatcher = req.getRequestDispatcher("/userSearchResults.jsp");
         dispatcher.forward(req, resp);
     }
