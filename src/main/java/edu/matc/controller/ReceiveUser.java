@@ -37,7 +37,8 @@ public class ReceiveUser extends HttpServlet {
 
         if (inputType.equals("searchid")) {
             logger.info("SEARCH USER BY ID INITIALIZED");
-            req.setAttribute("users", userDao.getUser(userInput));
+            int userid = Integer.parseInt(userInput);
+            req.setAttribute("users", userDao.getUser(userid));
         } else {
             logger.info("SEARCH ALL USERS INITIALIZED");
             req.setAttribute("users", userDao.getAllUsers());

@@ -19,7 +19,6 @@ public class MsgsDAO {
     private final Logger log = Logger.getLogger(this.getClass());
 
 
-    //TODO why is this msgs unknown
     /** Return a list of all msgs
      *
      * @return All msgs
@@ -27,7 +26,7 @@ public class MsgsDAO {
     public List<Msgs> getAllMsgs() {
         List<Msgs> msgs = new ArrayList<Msgs>();
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
-        msgs = session.createCriteria(msgs.class).list();
+        msgs = session.createCriteria(Msgs.class).list();
         session.close();
         return msgs;
     }
@@ -47,18 +46,19 @@ public class MsgsDAO {
     }
 
 
-    //TODO this needs to be a list
+
     /**
-     * retrieve a msg given its tag
+     * retrieve a msgs by tags
      *
      * @param tag the msg's tag
-     * @return msg
+     * @return msgs
      */
-    public Msgs getMsgByTag(String tag) {
+    public List<Msgs> getMsgByTag(String tag) {
+        List<Msgs> msgs = new ArrayList<Msgs>();
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
-        Msgs msg = (Msgs) session.get(Msgs.class, tag);
+        msgs = session.createCriteria(Msgs.class, tag).list();
         session.close();
-        return msg;
+        return msgs;
     }
 
     /**
@@ -93,9 +93,12 @@ public class MsgsDAO {
      * delete a msg by id
      * @param id the msg's id
      */
-    public void deleteMsg(int id) {
+    public int deleteMsg(int id) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Msgs msg = (Msgs) session.get(Msgs.class, id);
+
+        //TODO check cached id
+        int cachedid = id;
         Transaction tx = null;
         try {
             tx = session.beginTransaction();
@@ -111,7 +114,7 @@ public class MsgsDAO {
         finally {
             session.close() ;
         }
-        //TODO add a return value (int)
+        return cachedid;
     }
 
     /**

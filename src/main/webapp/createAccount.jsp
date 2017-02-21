@@ -3,12 +3,12 @@
 
 <body>
 <div>
-    //include a call to the proper msg here
+    //must be declared in servlet
     ${msgs.msgid}
 </div>
 
 <div>
-<h2>Create an Acount: </h2>
+<h2>Create an Account: </h2>
     <form action="CreateUser" method="get">
         <input type="text" name="userName"><br>
         <input type="text" name="firstName"><br>

@@ -32,15 +32,12 @@ public class DeleteMsg extends HttpServlet {
         MsgsDAO msgDao = new MsgsDAO();
 
         String comfirmDelete = req.getParameter("comfirmDelete");
-
         int msgid = Integer.parseInt(req.getParameter("userInput"));
 
 
         //TODO add in a conditional to test if user wanting to delete the msg is the user who posted it or admin
         if (comfirmDelete.equals("Conrfim")) {
             logger.info("MSG DELETE CONFIRMED");
-
-            //TODO make "deleteMsg()" Return a value
             req.setAttribute("msgs", msgDao.deleteMsg(msgid));
             RequestDispatcher dispatcher = req.getRequestDispatcher("/userMsgDeleteSuccess.jsp");
             dispatcher.forward(req, resp);

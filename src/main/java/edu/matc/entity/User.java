@@ -52,10 +52,8 @@ public class User {
      * @param userName    the username
      * @param email    the email
      * @param password    the password
-     * @param userid      the userid
      */
-    public User(int userid, String userName, String firstName, String lastName, String email, String password) {
-        this.userid = userid;
+    public User(String userName, String firstName, String lastName, String email, String password) {
         this.userName = userName;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -69,7 +67,7 @@ public class User {
      * @return the userName
      */
     public String getUserName() {
-        return username;
+        return userName;
     }
 
     /**

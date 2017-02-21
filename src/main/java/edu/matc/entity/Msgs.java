@@ -46,13 +46,11 @@ public class Msgs {
     /**
      * Instantiates a new User.
      *
-     * @param msgid   the msgid
      * @param userid    the userid
      * @param content    the content
      * @param tag    the tag
      */
-    public Msgs(int msgid, int userid, String content, String tag) {
-        this.msgid = msgid;
+    public Msgs(int userid, String content, String tag) {
         this.userid = userid;
         this.content = content;
         this.tag = tag;

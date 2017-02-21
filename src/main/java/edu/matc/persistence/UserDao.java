@@ -75,9 +75,12 @@ public class UserDao {
      * @param id the user's id
      * @return the id of the deleted record
      */
-    public void deleteUser(int id) {
+    public int deleteUser(int id) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         User user = (User) session.get(User.class, id);
+        //TODO check cached id
+        int cachedid = id;
+
         Transaction tx = null;
         try {
             tx = session.beginTransaction();
@@ -93,6 +96,7 @@ public class UserDao {
         finally {
             session.close() ;
         }
+        return cachedid;
     }
 
     /**

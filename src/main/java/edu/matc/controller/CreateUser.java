@@ -29,6 +29,8 @@ public class CreateUser extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
+        //TODO EDIT RUN CONFIG!!!!
+
         UserDao userDao = new UserDao();
 
         String userName = req.getParameter("userName");
@@ -38,6 +40,7 @@ public class CreateUser extends HttpServlet {
         String password = req.getParameter("password");
         String passwordConfirmed = req.getParameter("passwordConfirmed");
 
+        //TODO check out hibernate validator for back end and bootstrap for front end
         if (password.equals(passwordConfirmed)) {
             User user = new User(userName, firstName, lastName, email, password);
             req.setAttribute("users", userDao.addUser(user));
