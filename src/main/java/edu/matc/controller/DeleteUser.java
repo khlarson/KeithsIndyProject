@@ -34,16 +34,19 @@ public class DeleteUser extends HttpServlet {
 
         UserDao userDao = new UserDao();
 
-        comfirmDelete = req.getParameter("comfirmDelete");
+        String comfirmDelete = req.getParameter("comfirmDelete");
+        int userid = Integer.parseInt(req.getParameter("userInput"));
 
         if (comfirmDelete.equals("Conrfim")) {
             logger.info("USER DELETE CONFIRMED");
-            req.setAttribute("users", userDao.deleteUser(req.getParameter("userInput")));
+
+            //TODO make "deleteUser()" Return a value
+            req.setAttribute("users", userDao.deleteUser(userid));
             RequestDispatcher dispatcher = req.getRequestDispatcher("/adminUserDeleteSuccess.jsp");
             dispatcher.forward(req, resp);
         } else if (comfirmDelete.equals("?")) {
             logger.info("USER DELETE AWAITING CONFORMATION");
-            req.setAttribute("users", userDao.getUser(req.getParameter("userInput")));
+            req.setAttribute("users", userDao.getUser(userid));
             RequestDispatcher dispatcher = req.getRequestDispatcher("/adminUserConfimDelete.jsp");
             dispatcher.forward(req, resp);
         } else {

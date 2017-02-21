@@ -1,5 +1,7 @@
 package edu.matc.controller;
 
+import edu.matc.entity.Msgs;
+import edu.matc.persistence.MsgsDAO;
 import edu.matc.persistence.UserDao;
 import org.apache.log4j.Logger;
 
@@ -27,13 +29,14 @@ public class CreateMsg extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        MsgsDao msgDao = new MsgsDao();
+        MsgsDAO msgDao = new MsgsDAO();
 
-        String content = req.getParameter("content");
+        //Will need to get userid from current session
+        String userid = "?";
         String content = req.getParameter("content");
         String tag = req.getParameter("tag");
 
-        msg = new Msgs(userid, content, tag, email, password);
+        Msgs msg = new Msgs(userid, content, tag);
         req.setAttribute("msgs", msgDao.addMsg(msg));
         RequestDispatcher dispatcher = req.getRequestDispatcher("/addMsgSuccess.jsp");
         dispatcher.forward(req, resp);

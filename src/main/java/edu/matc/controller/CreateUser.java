@@ -1,5 +1,6 @@
 package edu.matc.controller;
 
+import edu.matc.entity.User;
 import edu.matc.persistence.UserDao;
 import org.apache.log4j.Logger;
 
@@ -38,7 +39,7 @@ public class CreateUser extends HttpServlet {
         String passwordConfirmed = req.getParameter("passwordConfirmed");
 
         if (password.equals(passwordConfirmed)) {
-            user = new User(userName, firstName, lastName, email, password);
+            User user = new User(userName, firstName, lastName, email, password);
             req.setAttribute("users", userDao.addUser(user));
             RequestDispatcher dispatcher = req.getRequestDispatcher("/UserHome.jsp");
             dispatcher.forward(req, resp);

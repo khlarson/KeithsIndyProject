@@ -1,5 +1,6 @@
 package edu.matc.persistence;
 
+import edu.matc.entity.Msgs;
 import edu.matc.entity.Sponsor;
 import edu.matc.entity.User;
 import org.apache.log4j.Logger;
@@ -17,6 +18,8 @@ public class MsgsDAO {
 
     private final Logger log = Logger.getLogger(this.getClass());
 
+
+    //TODO why is this msgs unknown
     /** Return a list of all msgs
      *
      * @return All msgs
@@ -42,13 +45,16 @@ public class MsgsDAO {
         session.close();
         return msg;
     }
+
+
+    //TODO this needs to be a list
     /**
      * retrieve a msg given its tag
      *
-     * @param id the msg's tag
+     * @param tag the msg's tag
      * @return msg
      */
-    public Msgs getMsgByTag(String Tag) {
+    public Msgs getMsgByTag(String tag) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Msgs msg = (Msgs) session.get(Msgs.class, tag);
         session.close();
@@ -82,6 +88,7 @@ public class MsgsDAO {
         return id ;
     }
 
+
     /**
      * delete a msg by id
      * @param id the msg's id
@@ -92,7 +99,7 @@ public class MsgsDAO {
         Transaction tx = null;
         try {
             tx = session.beginTransaction();
-            session.delete(sponsor);
+            session.delete(msg);
             tx.commit();
         }
         catch (HibernateException e) {
@@ -104,6 +111,7 @@ public class MsgsDAO {
         finally {
             session.close() ;
         }
+        //TODO add a return value (int)
     }
 
     /**

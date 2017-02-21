@@ -1,5 +1,6 @@
 package edu.matc.controller;
 
+import edu.matc.persistence.MsgsDAO;
 import edu.matc.persistence.UserDao;
 import org.apache.log4j.Logger;
 
@@ -28,20 +29,24 @@ public class DeleteMsg extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        MsgsDao msgDao = new MsgsDao();
+        MsgsDAO msgDao = new MsgsDAO();
 
-        comfirmDelete = req.getParameter("comfirmDelete");
+        String comfirmDelete = req.getParameter("comfirmDelete");
 
-        //add in a conditional to test if user wanting to exicute the delete is the user who posted it or admin
+        int msgid = Integer.parseInt(req.getParameter("userInput"));
 
+
+        //TODO add in a conditional to test if user wanting to delete the msg is the user who posted it or admin
         if (comfirmDelete.equals("Conrfim")) {
             logger.info("MSG DELETE CONFIRMED");
-            req.setAttribute("users", userDao.deleteUser(req.getParameter("userInput")));
+
+            //TODO make "deleteMsg()" Return a value
+            req.setAttribute("msgs", msgDao.deleteMsg(msgid));
             RequestDispatcher dispatcher = req.getRequestDispatcher("/userMsgDeleteSuccess.jsp");
             dispatcher.forward(req, resp);
         } else if (comfirmDelete.equals("?")) {
             logger.info("MSG DELETE AWAITING CONFORMATION");
-            req.setAttribute("users", userDao.getUser(req.getParameter("userInput")));
+            req.setAttribute("msgs", msgDao.getMsg(msgid));
             RequestDispatcher dispatcher = req.getRequestDispatcher("/userMsgConfimDelete.jsp");
             dispatcher.forward(req, resp);
         } else {

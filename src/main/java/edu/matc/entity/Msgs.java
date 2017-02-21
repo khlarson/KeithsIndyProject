@@ -9,6 +9,10 @@ import java.time.Period;
 
 import static java.time.LocalDate.now;
 
+//TODO add a auto time grab "now()?" to get the date of each msg
+
+//TODO find a way to handle userid (foriegn key)
+
 /**
  * A class to represent a msg.
  *
@@ -68,7 +72,7 @@ public class Msgs {
      *
      * @param msgid the msgid
      */
-    public void setMsgid(int userid) {
+    public void setMsgid(int msgid) {
         this.msgid = msgid;
     }
 
