@@ -1,9 +1,19 @@
 Maps
 
 {
+(REST)
+	-convention for building service
+	Resource(Entity,Object)
+	HTTP Requests(Get, Put(update), Post(insert), Delete)	
+
+	uri = endpoint "http://NAME_OF_SERVICE/RESOURCE/UNIQUE_IDENTIFIER(of resource) 
+
+
 -Google Maps 
+
 	End Point:  
 	https://www.google.com/maps/embed/v1/
+	maybe
 
 	Base Page:	
 	https://www.programmableweb.com/api/google-maps
@@ -13,9 +23,12 @@ Maps
 	https://developers.google.com/maps/get-started/
 	
 
+	Places:
+	https://developers.google.com/places/web-service/
+
+
 	Travel Time(maybe wsdl)
 	https://developers.google.com/maps/documentation/distance-matrix/
-
 
 }
 
