@@ -11,7 +11,7 @@ import static java.time.LocalDate.now;
 
 //TODO add a auto time grab "now()?" to get the date of each msg
 
-//TODO find a way to handle userid (foriegn key)
+//TODO userid will have to be attained from the current session
 
 /**
  * A class to represent a msg.

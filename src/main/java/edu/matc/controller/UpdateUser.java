@@ -1,5 +1,6 @@
 package edu.matc.controller;
 
+import edu.matc.entity.User;
 import edu.matc.persistence.UserDao;
 import org.apache.log4j.Logger;
 
@@ -30,10 +31,12 @@ public class UpdateUser extends HttpServlet {
 
         logger.info("In the doGet()");
         logger.warn("In the doGet() - This is a warning");
-        UserDao userData = new UserDao();
+        UserDao userDao = new UserDao();
+
+        User user = new User();
 
         //TODO will need to add param to update user
-        req.setAttribute("users", userData.updateUser());
+        req.setAttribute("users", userDao.updateUser(user));
         RequestDispatcher dispatcher = req.getRequestDispatcher("/userSearchResults.jsp");
         dispatcher.forward(req, resp);
     }

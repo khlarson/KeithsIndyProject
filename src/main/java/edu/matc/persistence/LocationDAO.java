@@ -74,9 +74,10 @@ public class LocationDAO {
      * @param id the location's id
      * @return the id of the deleted record
      */
-    public void deleteLocation(int id) {
+    public int deleteLocation(int id) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Location location = (Location) session.get(User.class, id);
+        int cachedid = id;
         Transaction tx = null;
         try {
             tx = session.beginTransaction();
@@ -92,6 +93,7 @@ public class LocationDAO {
         finally {
             session.close() ;
         }
+        return id;
     }
 
     /**

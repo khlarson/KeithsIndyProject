@@ -1,0 +1,39 @@
+Maps
+
+{
+-Google Maps 
+	End Point:  
+	https://www.google.com/maps/embed/v1/
+
+	Base Page:	
+	https://www.programmableweb.com/api/google-maps
+
+	
+	Are these standalone API's or Objects of the Overarching Google maps api???
+	https://developers.google.com/maps/get-started/
+	
+
+	Travel Time(maybe wsdl)
+	https://developers.google.com/maps/documentation/distance-matrix/
+
+
+}
+
+
+______________________________________________________
+Calanders
+
+{
+https://www.programmableweb.com/api/hubspot-calendar
+http://developers.hubspot.com/docs/overview
+
+-HubSpot Calendar API
+}
+
+
+{
+https://www.programmableweb.com/api/google-calendar
+https://developers.google.com/google-apps/calendar/
+
+-Google Calendar
+}

@@ -31,8 +31,16 @@ public class CreateMsg extends HttpServlet {
 
         MsgsDAO msgDao = new MsgsDAO();
 
-        //Will need to get userid from current session
-        String userid = "?";
+
+        int userid = 1;
+
+        //TODO "request" session userid jdoc session
+            //get remote user will return username of logged in user
+
+        //isUserInRole() returns a bool if Authenticated user. Takes a role as a param
+            //boolean isUserInRole(java.lang.String role)
+            //use to check if a user should be able to create a msg
+
         String content = req.getParameter("content");
         String tag = req.getParameter("tag");
 

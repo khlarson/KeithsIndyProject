@@ -104,7 +104,7 @@ public class UserDao {
      * @param user
      */
     public void updateUser(User user) {
-        Session session = SessionFactoryProvider.getSessionFactory().openSession() ;
+        Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction tx = null ;
         try {
             tx = session.beginTransaction() ;
