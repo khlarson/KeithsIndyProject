@@ -60,7 +60,7 @@
                 <h2 class="wow bounce">Our Sponsors</h2>
             </div>
             <div class="col-md-4 col-sm-4 wow fadeIn" data-wow-delay="0.3s">
-                <img src="images/team1.jpg" class="img-responsive" alt="team img">
+                <!--<img src="images/team1.jpg" class="img-responsive" alt="team img">-->
                 <h3>Names Will Be Taken from Sponsor Database</h3>
                 <p>Description of Sponsor will be taken from db</p>
                 <ul class="social-icon text-center">
@@ -71,7 +71,7 @@
                 </ul>
             </div>
             <div class="col-md-4 col-sm-4 wow fadeIn" data-wow-delay="0.6s">
-                <img src="images/team2.jpg" class="img-responsive" alt="team img">
+                <!--<img src="images/team2.jpg" class="img-responsive" alt="team img">-->
                 <h3>Names Will Be Taken from Sponsor Database</h3>
                 <p>Description of Sponsor will be taken from db</p>
                 <ul class="social-icon text-center">
@@ -82,7 +82,7 @@
                 </ul>
             </div>
             <div class="col-md-4 col-sm-4 wow fadeIn" data-wow-delay="0.9s">
-                <img src="images/team3.jpg" class="img-responsive" alt="team img">
+                <!--<img src="images/team3.jpg" class="img-responsive" alt="team img">-->
                 <h3>Names Will Be Taken from Sponsor Database</h3>
                 <p>Description of Sponsor will be taken from db</p>
                 <ul class="social-icon text-center">

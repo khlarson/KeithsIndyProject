@@ -72,9 +72,7 @@
                                     <!--Photo should be recieved from db -->
                                     <img src="images/portfolio-img1.jpg" class="fluid-img" alt="portfolio img">
                                     <div class="portfolio-overlay">
-                                        <a href="#" class="fa fa-search"></a>
-                                        <a href="#" class="fa fa-link"></a>
-
+                                        <a href="ScheduleEvents.jsp">LearnMore/Schedule</a>
                                         <!--trips categories, trip cover photos will be retrieved with db connections-->
                                         <h4>Option 1</h4>
                                         <p>Come Enjoy!... Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonumm.</p>
