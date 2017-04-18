@@ -103,7 +103,7 @@ public class UserDao {
      * Update the user
      * @param user
      */
-    public void updateUser(User user) {
+    public User updateUser(User user) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         Transaction tx = null ;
         try {
@@ -120,6 +120,7 @@ public class UserDao {
         finally {
             session.close() ;
         }
+        return user;
     }
 
 

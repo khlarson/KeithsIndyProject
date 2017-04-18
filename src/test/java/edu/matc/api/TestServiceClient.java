@@ -9,6 +9,7 @@ import static org.junit.Assert.*;
  */
 public class TestServiceClient {
 
+    //TODO rename this test if Response Media Type != json
     @Test
     public void testGoogleApiJSON() throws Exception {
         //Gives ability to make a  call to an external service
