@@ -11,6 +11,7 @@ import java.util.List;
  */
 public class EventDAO {
 
+    //TODO return all events with matching ids
     public List<Event> getEventsByCategory(int eventCategoryID) {
         List<Event> events = new ArrayList<Event>();
         Session session = SessionFactoryProvider.getSessionFactory().openSession();

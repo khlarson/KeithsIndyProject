@@ -76,7 +76,7 @@ public class LocationDAO {
      */
     public int deleteLocation(int id) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
-        Location location = (Location) session.get(User.class, id);
+        Location location = (Location) session.get(Location.class, id);
         int cachedid = id;
         Transaction tx = null;
         try {
