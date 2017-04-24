@@ -78,7 +78,6 @@ public class UserDao {
     public int deleteUser(int id) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         User user = (User) session.get(User.class, id);
-        //TODO check cached id
         int cachedid = id;
 
         Transaction tx = null;

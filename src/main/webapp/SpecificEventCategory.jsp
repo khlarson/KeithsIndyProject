@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>Events: ${event.category}</title>
+    <title>Events</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -51,31 +51,19 @@
 </div>
 <!-- end navigation -->
 <br><br><br><br>
-<p>Must take be redirected through get event controller and retrieve all events<br>
+<p>This page shows events of a specific category<br>
 
     Need to access<br>
     for photo links:<br>
-    jstl for each loop will run through and populate event links below with description(also need hidden EventID)<br>
-    one photo with matching EventId from ReceivePhoto Controller, resized using webservice<br><br>
+    photos with specific matching category tags<br>
+    resized using webservice<br><br>
 
     for page description:<br>
-    will need to access RecieveMsgs Controller and get EventsMsg(displayed with jstl)<br>
+    eventType.description -----> controller must call get event with specific id<br><br>
 
     for map API:<br>
-    google maps with full view of madison
-
-
-    Booking Request Form that will only be showed to logged in users<br>
-
-
-    Need to return to db from form<br>
-    Booking information<br>
-    -UserID (will be taken from the session)<br>
-    -DateTime<br>
-    -EventID<br>
-
-
-    All new events scheduled will be sent to admin notification's for review</p>
+    google passed parameters of locations<br>
+    locations from EventLocation ------> use each specific id in category to find location<br></p>
 <!-- start google map -->
 <div class="google_map">
     <div id="map-canvas"></div>
@@ -94,18 +82,18 @@
                     <div class="iso-box-section">
                         <div class="iso-box-wrapper col4-iso-box">
 
-                            <c:forEach var="eventTypes" items="${eventTypes}" >
+                            <c:forEach var="events" items="${event}" >
                                 <div class="iso-box graphic photoshop wallpaper col-md-4 col-sm-6 col-xs-12">
 
                                     <div class="portfolio-thumb">
                                         <!--Photo should be recieved from db -->
-                                        <img src=${eventTypes.photo} class="fluid-img" alt="portfolio img">
+                                        <img src=${event.photo} class="fluid-img" alt="portfolio img">
                                         <div class="portfolio-overlay">
                                             <!--when user clicks, must also pass the event ID -->
-                                            <a href="SpecificEventsCatergory.jsp">LearnMore/Schedule</a>
+                                            <a href="ScheduleEvents.jsp">LearnMore/Schedule</a>
 
-                                            <h4>${eventTypes.category}</h4>
-                                            <p>${eventTypes.description}</p>
+                                            <h4>${event.name}</h4>
+                                            <p>${eventType.description}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -119,6 +107,8 @@
     </div>
 </div>
 <!-- end portfolio -->
+
+
 
 <!-- start footer -->
 <footer>
@@ -143,7 +133,6 @@
 </footer>
 <!-- end footer -->
 
-
 <!-- jQuery -->
 <script src="js/jquery.js"></script>
 <!-- bootstrap -->
@@ -163,3 +152,4 @@
 
 </body>
 </html>
+

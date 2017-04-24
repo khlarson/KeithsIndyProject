@@ -32,6 +32,8 @@ public class Sponsor {
     @Column(name = "id")
     private int sponsorID;
 
+    //TODO ADD facebook and twitter
+
     /**
      * Instantiates a new Location.
      */
