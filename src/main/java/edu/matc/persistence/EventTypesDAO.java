@@ -20,4 +20,11 @@ public class EventTypesDAO {
         session.close();
         return eventTypes;
     }
+
+    public EventTypes getEventCategoryById(int id){
+        Session session = SessionFactoryProvider.getSessionFactory().openSession();
+        EventTypes eventType = (EventTypes) session.get(EventTypes.class, id);
+        session.close();
+        return eventType;
+    }
 }

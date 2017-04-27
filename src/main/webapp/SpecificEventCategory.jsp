@@ -53,14 +53,6 @@
 <br><br><br><br>
 <p>This page shows events of a specific category<br>
 
-    Need to access<br>
-    for photo links:<br>
-    photos with specific matching category tags<br>
-    resized using webservice<br><br>
-
-    for page description:<br>
-    eventType.description -----> controller must call get event with specific id<br><br>
-
     for map API:<br>
     google passed parameters of locations<br>
     locations from EventLocation ------> use each specific id in category to find location<br></p>
@@ -93,7 +85,11 @@
                                             <a href="ScheduleEvents.jsp">LearnMore/Schedule</a>
 
                                             <h4>${event.name}</h4>
-                                            <p>${eventType.description}</p>
+                                            <p>${event.description}</p>
+                                            <c:forEach var="eventlocations" items="${event.getLocations()}" >
+                                                <p>${eventlocations.name}</p>
+                                                <p>${eventlocations.description}</p>
+                                            </c:forEach>
                                         </div>
                                     </div>
                                 </div>

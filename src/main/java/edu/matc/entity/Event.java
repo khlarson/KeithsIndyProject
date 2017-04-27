@@ -6,6 +6,7 @@ import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.Period;
+import java.util.List;
 
 import static java.time.LocalDate.now;
 
@@ -35,6 +36,14 @@ public class Event {
     @Column(name="photo")
     private String photo;
 
+    @ManyToMany(cascade = {CascadeType.ALL})
+    @JoinTable(name="Event_Location",
+            joinColumns={@JoinColumn(name="eventid")},
+            inverseJoinColumns={@JoinColumn(name="locationid")})
+
+    private List<Location> locations;
+
+
     /**
      * Instantiates a new Event.
      */
@@ -50,11 +59,20 @@ public class Event {
      * @param photo    the location of the photo
 
      */
-    public Event(String eventName, String description, String category, String photo) {
+    public Event(String eventName, String description, String category, String photo, List<Location> locations) {
         this.eventName = eventName;
         this.description = description;
         this.category = category;
         this.photo = photo;
+        this.locations = locations;
+    }
+
+    public List<Location> getLocations() {
+        return locations;
+    }
+
+    public void setLocations(List<Location> locations) {
+        this.locations = locations;
     }
 
     /**

@@ -2,11 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="287fba0c-ecb8-456e-a7b1-d7fbc9e9f4bd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/matc/entity/EventLocation.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/matc/api/googlemaps.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/edu/matc/entity/EventLocation.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/edu/matc/persistence/EventLocationDAO.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/matc/controller/jspControllers/SpecificEventCategoryController.java" afterPath="$PROJECT_DIR$/src/main/java/edu/matc/controller/jspControllers/SpecificEventCategoryController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/matc/entity/Event.java" afterPath="$PROJECT_DIR$/src/main/java/edu/matc/entity/Event.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/matc/entity/Location.java" afterPath="$PROJECT_DIR$/src/main/java/edu/matc/entity/Location.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/matc/persistence/EventDAO.java" afterPath="$PROJECT_DIR$/src/main/java/edu/matc/persistence/EventDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/matc/persistence/EventLocationDAO.java" afterPath="$PROJECT_DIR$/src/main/java/edu/matc/persistence/EventLocationDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/matc/persistence/LocationDAO.java" afterPath="$PROJECT_DIR$/src/main/java/edu/matc/persistence/LocationDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/matc/persistence/EventTypesDAO.java" afterPath="$PROJECT_DIR$/src/main/java/edu/matc/persistence/EventTypesDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/Events.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/Events.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/SpecificEventCategory.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/SpecificEventCategory.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -23,62 +29,133 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="UserDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/persistence/UserDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="3" column="6" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Event.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/entity/Event.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="10" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="93" selection-end-column="5" />
+            <state relative-caret-position="954">
+              <caret line="61" column="110" lean-forward="false" selection-start-line="61" selection-start-column="101" selection-end-line="61" selection-end-column="110" />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#1687#1688#0" expanded="false" />
+                <element signature="e#1719#1720#0" expanded="false" />
+                <element signature="e#1777#1778#0" expanded="false" />
+                <element signature="e#1819#1820#0" expanded="false" />
+                <element signature="e#1921#1922#0" expanded="false" />
+                <element signature="e#1951#1952#0" expanded="false" />
+                <element signature="e#2072#2073#0" expanded="false" />
+                <element signature="e#2110#2111#0" expanded="false" />
+                <element signature="e#2221#2222#0" expanded="false" />
+                <element signature="e#2253#2254#0" expanded="false" />
+                <element signature="e#2387#2388#0" expanded="false" />
+                <element signature="e#2429#2430#0" expanded="false" />
+                <element signature="e#2546#2547#0" expanded="false" />
+                <element signature="e#2580#2581#0" expanded="false" />
+                <element signature="e#2724#2725#0" expanded="false" />
+                <element signature="e#2770#2771#0" expanded="false" />
+                <element signature="e#2878#2879#0" expanded="false" />
+                <element signature="e#2909#2910#0" expanded="false" />
+                <element signature="e#3038#3039#0" expanded="false" />
+                <element signature="e#3078#3079#0" expanded="false" />
+                <element signature="e#3177#3178#0" expanded="false" />
+                <element signature="e#3205#3206#0" expanded="false" />
+                <element signature="e#3319#3320#0" expanded="false" />
+                <element signature="e#3353#3354#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Location.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/entity/Location.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="18">
+              <caret line="37" column="30" lean-forward="false" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="30" />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#1250#1251#0" expanded="false" />
+                <element signature="e#1277#1278#0" expanded="false" />
+                <element signature="e#1401#1402#0" expanded="false" />
+                <element signature="e#1433#1434#0" expanded="false" />
+                <element signature="e#1526#1527#0" expanded="false" />
+                <element signature="e#1552#1553#0" expanded="false" />
+                <element signature="e#1656#1657#0" expanded="false" />
+                <element signature="e#1686#1687#0" expanded="false" />
+                <element signature="e#1804#1805#0" expanded="false" />
+                <element signature="e#1838#1839#0" expanded="false" />
+                <element signature="e#1982#1983#0" expanded="false" />
+                <element signature="e#2028#2029#0" expanded="false" />
+                <element signature="e#2124#2125#0" expanded="false" />
+                <element signature="e#2152#2153#0" expanded="false" />
+                <element signature="e#2263#2264#0" expanded="false" />
+                <element signature="e#2297#2298#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SpecificEventCategory.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/SpecificEventCategory.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="53" column="52" lean-forward="false" selection-start-line="53" selection-start-column="52" selection-end-line="53" selection-end-column="52" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Sponsor.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/entity/Sponsor.java">
+      <file leaf-file-name="googlemaps.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/api/googlemaps.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="83" column="5" lean-forward="true" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
+            <state relative-caret-position="306">
+              <caret line="17" column="37" lean-forward="false" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Events.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/Events.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="503">
+              <caret line="87" column="76" lean-forward="false" selection-start-line="87" selection-start-column="76" selection-end-line="87" selection-end-column="76" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EventTypes.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/entity/EventTypes.java">
+      <file leaf-file-name="SpecificEventCategoryController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/controller/jspControllers/SpecificEventCategoryController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="774">
-              <caret line="47" column="7" lean-forward="true" selection-start-line="47" selection-start-column="7" selection-end-line="47" selection-end-column="7" />
+            <state relative-caret-position="557">
+              <caret line="43" column="77" lean-forward="false" selection-start-line="43" selection-start-column="77" selection-end-line="43" selection-end-column="77" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EventLocation.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/entity/EventLocation.java">
+      <file leaf-file-name="EventTypesDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/persistence/EventTypesDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="12" column="39" lean-forward="false" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
-              <folding />
+            <state relative-caret-position="414">
+              <caret line="23" column="47" lean-forward="false" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LocationDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/persistence/LocationDAO.java">
+      <file leaf-file-name="UserDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/persistence/UserDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="756">
-              <caret line="50" column="18" lean-forward="true" selection-start-line="50" selection-start-column="18" selection-end-line="50" selection-end-column="18" />
-              <folding />
+            <state relative-caret-position="576">
+              <caret line="39" column="14" lean-forward="false" selection-start-line="38" selection-start-column="8" selection-end-line="42" selection-end-column="20" />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#594#600#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -86,22 +163,12 @@
       <file leaf-file-name="EventDAO.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/persistence/EventDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="13" column="46" lean-forward="false" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
+            <state relative-caret-position="378">
+              <caret line="26" column="21" lean-forward="false" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#366#373#0" expanded="true" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#399#406#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EventLocationDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/persistence/EventLocationDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" column="37" lean-forward="false" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -127,8 +194,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/adminrestricted/searchUsers.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/adminrestricted/adminUsers.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/adminrestricted/adminUser/adminDeleteUser.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/adminrestricted/adminUser/adminUsers.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/adminrestricted/adminTrips/adminTripSearch.jsp" />
@@ -165,19 +230,21 @@
         <option value="$PROJECT_DIR$/src/main/java/edu/matc/persistence/UserDao.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/ScheduleEvents.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/edu/matc/entity/Photo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/matc/persistence/EventTypesDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/Events.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/SpecificEventCategory.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/edu/matc/controller/jspControllers/EventsController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/matc/controller/jspControllers/SpecificEventCategoryController.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/matc/controller/jspControllers/SponsorController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/matc/entity/Event.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/matc/entity/EventTypes.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/matc/entity/Sponsor.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/matc/persistence/LocationDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/matc/entity/EventLocation.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/matc/persistence/EventLocationDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/matc/persistence/EventDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/matc/persistence/EventTypesDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/matc/entity/Event.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/matc/entity/Location.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/SpecificEventCategory.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/matc/api/googlemaps.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/matc/controller/jspControllers/SpecificEventCategoryController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/Events.jsp" />
       </list>
     </option>
   </component>
@@ -195,8 +262,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="54" />
-    <option name="y" value="86" />
+    <option name="x" value="57" />
+    <option name="y" value="52" />
     <option name="width" value="1863" />
     <option name="height" value="1028" />
   </component>
@@ -215,6 +282,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -319,7 +389,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="persistence" />
+              <option name="myItemId" value="api" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -333,107 +403,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="edu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="matc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="entity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MadTownHopper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="KeithsIndyProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="edu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="matc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MadTownHopper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="KeithsIndyProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="edu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="matc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jspControllers" />
+              <option name="myItemId" value="possible api's" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -865,12 +840,16 @@
       <workItem from="1492710883801" duration="21000" />
       <workItem from="1492711049480" duration="3750000" />
       <workItem from="1492804729193" duration="387000" />
-      <workItem from="1493060209029" duration="11230000" />
+      <workItem from="1493060209029" duration="11313000" />
+      <workItem from="1493142266663" duration="4980000" />
+      <workItem from="1493148959194" duration="4012000" />
+      <workItem from="1493314030118" duration="5299000" />
+      <workItem from="1493323096911" duration="3453000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87448000" />
+    <option name="totallyTimeSpent" value="105275000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -882,7 +861,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="54" y="86" width="1863" height="1028" extended-state="0" />
+    <frame x="57" y="52" width="1863" height="1028" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -906,8 +885,8 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.05698925" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21078701" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.030107526" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2201431" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.044028617" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -971,27 +950,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/adminrestricted/adminUser/adminUserAbortDelete.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/adminrestricted/adminUser/adminUserDelete.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="20" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/controller/UpdateMsg.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="22" lean-forward="false" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/User/Msg/userMsgDelete.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1066,7 +1024,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1062">
           <caret line="59" column="21" lean-forward="false" selection-start-line="59" selection-start-column="21" selection-end-line="59" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1134,7 +1091,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="20" column="58" lean-forward="false" selection-start-line="20" selection-start-column="58" selection-end-line="20" selection-end-column="58" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1195,7 +1151,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="93" column="64" lean-forward="false" selection-start-line="93" selection-start-column="64" selection-end-line="93" selection-end-column="64" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1203,15 +1158,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="25" column="16" lean-forward="true" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/Events.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="549">
-          <caret line="104" column="70" lean-forward="false" selection-start-line="104" selection-start-column="70" selection-end-line="104" selection-end-column="70" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1219,7 +1165,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1228,34 +1173,6 @@
         <state relative-caret-position="540">
           <caret line="39" column="46" lean-forward="false" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="53" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/controller/jspControllers/EventsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="35" column="40" lean-forward="false" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/SpecificEventCategory.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="954">
-          <caret line="86" column="0" lean-forward="true" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/controller/jspControllers/SpecificEventCategoryController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="39" column="88" lean-forward="true" selection-start-line="39" selection-start-column="88" selection-end-line="39" selection-end-column="88" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1271,17 +1188,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="49" column="23" lean-forward="true" selection-start-line="49" selection-start-column="23" selection-end-line="49" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/persistence/EventTypesDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding>
-            <element signature="e#379#391#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1289,74 +1195,171 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="99">
           <caret line="111" column="36" lean-forward="true" selection-start-line="111" selection-start-column="36" selection-end-line="111" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/entity/EventTypes.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/entity/Sponsor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="774">
-          <caret line="47" column="7" lean-forward="true" selection-start-line="47" selection-start-column="7" selection-end-line="47" selection-end-column="7" />
-          <folding />
+        <state relative-caret-position="-342">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/persistence/EventLocationDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/persistence/EventLocationDAO.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/controller/jspControllers/EventsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="37" lean-forward="false" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
+        <state relative-caret-position="396">
+          <caret line="35" column="40" lean-forward="false" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/persistence/LocationDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="50" column="18" lean-forward="true" selection-start-line="50" selection-start-column="18" selection-end-line="50" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/entity/EventLocation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="12" column="39" lean-forward="false" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
+        <state relative-caret-position="234">
+          <caret line="54" column="13" lean-forward="true" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/persistence/EventDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="46" lean-forward="false" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
+        <state relative-caret-position="378">
+          <caret line="26" column="21" lean-forward="false" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#366#373#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#399#406#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/entity/EventLocation.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/entity/EventTypes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="774">
+          <caret line="47" column="7" lean-forward="false" selection-start-line="47" selection-start-column="7" selection-end-line="47" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/persistence/UserDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="6" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="31" />
-          <folding />
+        <state relative-caret-position="576">
+          <caret line="39" column="14" lean-forward="false" selection-start-line="38" selection-start-column="8" selection-end-line="42" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#594#600#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/possible api's/apiLinks.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/entity/Event.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="93" selection-end-column="5" />
+        <state relative-caret-position="954">
+          <caret line="61" column="110" lean-forward="false" selection-start-line="61" selection-start-column="101" selection-end-line="61" selection-end-column="110" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1687#1688#0" expanded="false" />
+            <element signature="e#1719#1720#0" expanded="false" />
+            <element signature="e#1777#1778#0" expanded="false" />
+            <element signature="e#1819#1820#0" expanded="false" />
+            <element signature="e#1921#1922#0" expanded="false" />
+            <element signature="e#1951#1952#0" expanded="false" />
+            <element signature="e#2072#2073#0" expanded="false" />
+            <element signature="e#2110#2111#0" expanded="false" />
+            <element signature="e#2221#2222#0" expanded="false" />
+            <element signature="e#2253#2254#0" expanded="false" />
+            <element signature="e#2387#2388#0" expanded="false" />
+            <element signature="e#2429#2430#0" expanded="false" />
+            <element signature="e#2546#2547#0" expanded="false" />
+            <element signature="e#2580#2581#0" expanded="false" />
+            <element signature="e#2724#2725#0" expanded="false" />
+            <element signature="e#2770#2771#0" expanded="false" />
+            <element signature="e#2878#2879#0" expanded="false" />
+            <element signature="e#2909#2910#0" expanded="false" />
+            <element signature="e#3038#3039#0" expanded="false" />
+            <element signature="e#3078#3079#0" expanded="false" />
+            <element signature="e#3177#3178#0" expanded="false" />
+            <element signature="e#3205#3206#0" expanded="false" />
+            <element signature="e#3319#3320#0" expanded="false" />
+            <element signature="e#3353#3354#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/entity/Location.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="37" column="30" lean-forward="false" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1250#1251#0" expanded="false" />
+            <element signature="e#1277#1278#0" expanded="false" />
+            <element signature="e#1401#1402#0" expanded="false" />
+            <element signature="e#1433#1434#0" expanded="false" />
+            <element signature="e#1526#1527#0" expanded="false" />
+            <element signature="e#1552#1553#0" expanded="false" />
+            <element signature="e#1656#1657#0" expanded="false" />
+            <element signature="e#1686#1687#0" expanded="false" />
+            <element signature="e#1804#1805#0" expanded="false" />
+            <element signature="e#1838#1839#0" expanded="false" />
+            <element signature="e#1982#1983#0" expanded="false" />
+            <element signature="e#2028#2029#0" expanded="false" />
+            <element signature="e#2124#2125#0" expanded="false" />
+            <element signature="e#2152#2153#0" expanded="false" />
+            <element signature="e#2263#2264#0" expanded="false" />
+            <element signature="e#2297#2298#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/persistence/EventTypesDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="23" column="47" lean-forward="false" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/SpecificEventCategory.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="53" column="52" lean-forward="false" selection-start-line="53" selection-start-column="52" selection-end-line="53" selection-end-column="52" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/entity/Sponsor.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/controller/jspControllers/SpecificEventCategoryController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="83" column="5" lean-forward="true" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
+        <state relative-caret-position="557">
+          <caret line="43" column="77" lean-forward="false" selection-start-line="43" selection-start-column="77" selection-end-line="43" selection-end-column="77" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/Events.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="503">
+          <caret line="87" column="76" lean-forward="false" selection-start-line="87" selection-start-column="76" selection-end-line="87" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/matc/api/googlemaps.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="37" lean-forward="false" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

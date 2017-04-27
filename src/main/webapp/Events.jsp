@@ -53,29 +53,9 @@
 <br><br><br><br>
 <p>Must take be redirected through get event controller and retrieve all events<br>
 
-    Need to access<br>
-    for photo links:<br>
-    jstl for each loop will run through and populate event links below with description(also need hidden EventID)<br>
-    one photo with matching EventId from ReceivePhoto Controller, resized using webservice<br><br>
-
-    for page description:<br>
-    will need to access RecieveMsgs Controller and get EventsMsg(displayed with jstl)<br>
-
     for map API:<br>
     google maps with full view of madison
 
-
-    Booking Request Form that will only be showed to logged in users<br>
-
-
-    Need to return to db from form<br>
-    Booking information<br>
-    -UserID (will be taken from the session)<br>
-    -DateTime<br>
-    -EventID<br>
-
-
-    All new events scheduled will be sent to admin notification's for review</p>
 <!-- start google map -->
 <div class="google_map">
     <div id="map-canvas"></div>
@@ -102,7 +82,7 @@
                                         <img src=${eventTypes.photo} class="fluid-img" alt="portfolio img">
                                         <div class="portfolio-overlay">
                                             <!--when user clicks, must also pass the event ID -->
-                                            <a href="SpecificEventsCatergory.jsp">LearnMore/Schedule</a>
+                                            <a href="/SpecificEventCategoryController?category= ${eventTypes.category}">LearnMore/Schedule</a>
 
                                             <h4>${eventTypes.category}</h4>
                                             <p>${eventTypes.description}</p>

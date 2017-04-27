@@ -6,6 +6,7 @@ import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.Period;
+import java.util.List;
 
 import static java.time.LocalDate.now;
 
@@ -32,6 +33,9 @@ public class Location {
     @Column(name = "id")
     private int locID;
 
+    //TODO mapp many to many with event location
+    @ManyToMany(mappedBy="locations")
+    private List<Event> events;
     /**
      * Instantiates a new Location.
      */

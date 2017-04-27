@@ -1,6 +1,7 @@
 package edu.matc.persistence;
 
 import edu.matc.entity.Event;
+import edu.matc.entity.Location;
 import org.hibernate.Session;
 
 import java.util.ArrayList;
@@ -19,4 +20,12 @@ public class EventDAO {
         session.close();
         return events;
     }
+
+
+    public void deleteEvent(Event event, Location location){
+
+        event.getLocations().remove(location);
+
+    }
+
 }
