@@ -82,7 +82,7 @@
                                         <img src=${eventTypes.photo} class="fluid-img" alt="portfolio img">
                                         <div class="portfolio-overlay">
                                             <!--when user clicks, must also pass the event ID -->
-                                            <a href="/SpecificEventCategoryController?category= ${eventTypes.category}">LearnMore/Schedule</a>
+                                            <a href="/jspControllers/SpecificEventCategoryController?category= ${eventTypes.id}">View these events</a>
 
                                             <h4>${eventTypes.category}</h4>
                                             <p>${eventTypes.description}</p>

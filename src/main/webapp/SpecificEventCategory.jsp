@@ -50,12 +50,7 @@
     </div>
 </div>
 <!-- end navigation -->
-<br><br><br><br>
-<p>This page shows events of a specific category<br>
 
-    for map API:<br>
-    google passed parameters of locations<br>
-    locations from EventLocation ------> use each specific id in category to find location<br></p>
 <!-- start google map -->
 <div class="google_map">
     <div id="map-canvas"></div>
@@ -82,7 +77,7 @@
                                         <img src=${event.photo} class="fluid-img" alt="portfolio img">
                                         <div class="portfolio-overlay">
                                             <!--when user clicks, must also pass the event ID -->
-                                            <a href="ScheduleEvents.jsp">LearnMore/Schedule</a>
+                                            <a href="/jspControllers/EventSpecificController?eventid= ${event.id}">LearnMore/Schedule</a>
 
                                             <h4>${event.name}</h4>
                                             <p>${event.description}</p>

@@ -37,7 +37,6 @@ public class googlemaps {
         }
     }
 
-
     Location location = new Location();
 	//TODO makeMap cannot be void
     public void makeMap(List<Location> locations){
@@ -58,9 +57,12 @@ public class googlemaps {
             String label = location.getName();
             String address = location.getAddress();
             address.replace(' ', '+');
+            //TODO lable param only can show one letter or num
             urlLocations = urlLocations + "&markers=color:red%7Clabel:" + label + "%7C" + address;
         }
         return urlLocations;
     }
 
+    //example
+    //https://maps.googleapis.com/maps/api/staticmap?center=Madison,WI&zoom=14&size=600x600&markers=color:blue|label:1|140+Iota+ct&markers=color:blue|label:S|10+n+livingston&key=AIzaSyBy_nDPQJnsmbKsZ0WSDlpDcnnfFVvzMN0
 }

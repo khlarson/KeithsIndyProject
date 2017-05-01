@@ -13,10 +13,10 @@ import java.util.List;
 public class EventDAO {
 
     //TODO return all events with matching ids
-    public List<Event> getEventsByCategory(int eventCategoryID) {
+    public List<Event> getEventsById(int eventid) {
         List<Event> events = new ArrayList<Event>();
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
-        events = session.createCriteria(Event.class, eventCategoryID).list();
+        events = session.createCriteria(Event.class, eventid).list();
         session.close();
         return events;
     }
