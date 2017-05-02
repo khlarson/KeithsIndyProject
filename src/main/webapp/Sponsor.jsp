@@ -1,3 +1,4 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,10 +39,10 @@
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="home.jsp">Home</a></li>
-                <li><a href="Sponsor.jsp">Sponsor</a></li>
-                <li><a href="Events.jsp">Special Events</a></li>
+                <li><a href="/AboutUsController">About Us</a></li>
+                <li><a href="/SponsorController">Sponsor</a></li>
+                <li><a href="/EventsController">Catered Events</a></li>
                 <li><a href="#team">Memories</a></li>
-                <li><a href="#pricing">Contact Us</a></li>
                 <li><a href="#portfolio">Donate</a></li>
             </ul>
         </div>
@@ -49,49 +50,39 @@
 </div>
 <!-- end navigation -->
 
+<!-- start about -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 wow fadeInLeft" data-wow-delay="0.9s">
+                <h3>Interested in becoming a Sponsor?</h3>
+                <h4>${msg.title}</h4>
+                <p>${msg.content}</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end about -->
+
 <!-- start team -->
 <div id="team">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                //TODO Admin created msg about how sponsors are valued and information about becoming a sponsor here
-
-                //TODO below each company add links to their facebook or twitter or whatever
                 <h2 class="wow bounce">Our Sponsors</h2>
             </div>
+            <c:forEach var="sponsor" items="${sponsors}" >
             <div class="col-md-4 col-sm-4 wow fadeIn" data-wow-delay="0.3s">
                 <!--<img src="images/team1.jpg" class="img-responsive" alt="team img">-->
-                <h3>Names Will Be Taken from Sponsor Database</h3>
-                <p>Description of Sponsor will be taken from db</p>
+                <h3>${sponsor.name}</h3>
+                <p>${sponsor.description}</p>
                 <ul class="social-icon text-center">
-                    <li><a href="#" class="wow fadeInUp fa fa-facebook" data-wow-delay="2s"></a></li>
-                    <li><a href="#" class="wow fadeInDown fa fa-twitter" data-wow-delay="2s"></a></li>
-                    <li><a href="#" class="wow fadeIn fa fa-instagram" data-wow-delay="2s"></a></li>
-                    <li><a href="#" class="wow fadeInUp fa fa-pinterest" data-wow-delay="2s"></a></li>
+                    <li><a href="${sponsor.facebook}" class="wow fadeInUp fa fa-facebook" data-wow-delay="2s"></a></li>
+                    <li><a href="${sponsor.twitter}" class="wow fadeInDown fa fa-twitter" data-wow-delay="2s"></a></li>
+                    <li><a href="${sponsor.website}" class="wow fadeIn fa fa-instagram" data-wow-delay="2s"></a></li>
                 </ul>
             </div>
-            <div class="col-md-4 col-sm-4 wow fadeIn" data-wow-delay="0.6s">
-                <!--<img src="images/team2.jpg" class="img-responsive" alt="team img">-->
-                <h3>Names Will Be Taken from Sponsor Database</h3>
-                <p>Description of Sponsor will be taken from db</p>
-                <ul class="social-icon text-center">
-                    <li><a href="#" class="wow fadeInUp fa fa-facebook" data-wow-delay="2s"></a></li>
-                    <li><a href="#" class="wow fadeInDown fa fa-twitter" data-wow-delay="2s"></a></li>
-                    <li><a href="#" class="wow fadeIn fa fa-instagram" data-wow-delay="2s"></a></li>
-                    <li><a href="#" class="wow fadeInUp fa fa-pinterest" data-wow-delay="2s"></a></li>
-                </ul>
-            </div>
-            <div class="col-md-4 col-sm-4 wow fadeIn" data-wow-delay="0.9s">
-                <!--<img src="images/team3.jpg" class="img-responsive" alt="team img">-->
-                <h3>Names Will Be Taken from Sponsor Database</h3>
-                <p>Description of Sponsor will be taken from db</p>
-                <ul class="social-icon text-center">
-                    <li><a href="#" class="wow fadeInUp fa fa-facebook" data-wow-delay="2s"></a></li>
-                    <li><a href="#" class="wow fadeInDown fa fa-twitter" data-wow-delay="2s"></a></li>
-                    <li><a href="#" class="wow fadeIn fa fa-instagram" data-wow-delay="2s"></a></li>
-                    <li><a href="#" class="wow fadeInUp fa fa-pinterest" data-wow-delay="2s"></a></li>
-                </ul>
-            </div>
+            </c:forEach>
         </div>
     </div>
 </div>

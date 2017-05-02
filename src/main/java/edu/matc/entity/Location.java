@@ -18,35 +18,42 @@ import static java.time.LocalDate.now;
 @Entity
 @Table(name = "Location")
 public class Location {
-    @Column(name = "loc_Name")
+    @Id
+    @GeneratedValue(generator="increment")
+    @GenericGenerator(name="increment", strategy = "increment")
+    @Column(name = "location_id")
+    private int location_ID;
+
+    @Column(name = "name")
     private String name;
 
-    @Column(name = "loc_tag")
+    @Column(name = "tag")
     private String tag;
 
     @Column(name = "description")
     private String description;
 
-    @Id
-    @GeneratedValue(generator="increment")
-    @GenericGenerator(name="increment", strategy = "increment")
-    @Column(name = "id")
-    private int locID;
+    @Column(name = "website")
+    private String website;
+    @Column(name = "address")
+    private String address;
 
-    //TODO mapp many to many with event location
     @ManyToMany(mappedBy="locations")
     private List<Event> events;
+
     /**
      * Instantiates a new Location.
      */
     public Location() {
     }
 
-    public Location(String name, String tag, String description, int locID) {
+    public Location(String name, String tag, String description, String website, String address, int location_ID) {
         this.name = name;
         this.tag = tag;
         this.description = description;
-        this.locID = locID;
+        this.website = website;
+        this.address = address;
+        this.location_ID = location_ID;
     }
 
     /**
@@ -90,7 +97,6 @@ public class Location {
      *
      * @return the description
      */
-
     public String getDescription() {
         return description;
     }
@@ -105,20 +111,64 @@ public class Location {
     }
 
     /**
-     * Gets locID.
+     * Gets website.
      *
-     * @return the locID
+     * @return the website
      */
-    public int getLocID() {
-        return locID;
+    public String getWebsite() {
+        return website;
     }
 
     /**
-     * Sets locID.
+     * Sets website.
      *
-     * @param locID the locID
+     * @param website the website
      */
-    public void setLocID(int locID) {
-        this.locID = locID;
+    public void setWebsite(String website) {
+        this.website = website;
+    }
+
+    /**
+     * Gets address.
+     *
+     * @return the address
+     */
+    public String getAddress() {
+        return address;
+    }
+
+    /**
+     * Sets address.
+     *
+     * @param address the address
+     */
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    /**
+     * Gets location_ID.
+     *
+     * @return the location_ID
+     */
+    public int getLocation_ID() {
+        return location_ID;
+    }
+
+    /**
+     * Sets locationID.
+     *
+     * @param location_ID the locationID
+     */
+    public void setLocation_ID(int location_ID) {
+        this.location_ID = location_ID;
+    }
+
+    public List<Event> getEvents() {
+        return events;
+    }
+
+    public void setEvents(List<Event> events) {
+        this.events = events;
     }
 }

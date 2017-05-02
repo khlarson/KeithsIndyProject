@@ -2,14 +2,16 @@ package edu.matc.entity;
 
 import edu.matc.util.LocalDateAttributeConverter;
 import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.Period;
+import java.util.Date;
 
 import static java.time.LocalDate.now;
 
-//TODO add a auto time grab "now()?" to get the date of each msg
+
 
 //TODO userid will have to be attained from the current session
 
@@ -19,16 +21,19 @@ import static java.time.LocalDate.now;
  * @author //khlarson
  */
 @Entity
-@Table(name = "msgs")
+@Table(name = "Msgs")
 public class Msgs {
     @Id
     @GeneratedValue(generator="increment")
     @GenericGenerator(name="increment", strategy = "increment")
-    @Column(name = "msgid")
-    private int msgid;
+    @Column(name = "msg_id")
+    private int msg_id;
 
-    @Column(name = "userid")
-    private int userid;
+    @Column(name = "user_id")
+    private int user_id;
+
+    @Column(name = "title")
+    private String title;
 
     @Column(name = "content")
     private String content;
@@ -36,6 +41,9 @@ public class Msgs {
     @Column(name = "tag")
     private String tag;
 
+    @Column(name = "date_time", columnDefinition="DATETIME")
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date date_time;
 
     /**
      * Instantiates a new Msg.
@@ -46,12 +54,13 @@ public class Msgs {
     /**
      * Instantiates a new User.
      *
-     * @param userid    the userid
+     * @param user_id    the user_id
      * @param content    the content
      * @param tag    the tag
      */
-    public Msgs(int userid, String content, String tag) {
-        this.userid = userid;
+    public Msgs(int user_id, String title, String content, String tag) {
+        this.user_id = user_id;
+        this.title = title;
         this.content = content;
         this.tag = tag;
     }
@@ -61,17 +70,17 @@ public class Msgs {
      *
      * @return the msgid
      */
-    public int getMsgid() {
-        return msgid;
+    public int getMsg_id() {
+        return msg_id;
     }
 
     /**
      * Sets msgid.
      *
-     * @param msgid the msgid
+     * @param msg_id the msgid
      */
-    public void setMsgid(int msgid) {
-        this.msgid = msgid;
+    public void setMsg_id(int msg_id) {
+        this.msg_id = msg_id;
     }
 
     /**
@@ -79,17 +88,17 @@ public class Msgs {
      *
      * @return the userid
      */
-    public int getUserid() {
-        return userid;
+    public int getUser_id() {
+        return user_id;
     }
 
     /**
      * Sets userid.
      *
-     * @param userid the userid
+     * @param user_id the userid
      */
-    public void setUserid(int userid) {
-        this.userid = userid;
+    public void setUser_id(int user_id) {
+        this.user_id = user_id;
     }
 
     /**
@@ -112,6 +121,13 @@ public class Msgs {
 
     /**
      * Gets tag
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
      *
      * @return the tag
      */
@@ -126,5 +142,22 @@ public class Msgs {
      */
     public void setTag(String tag) {
         this.tag = tag;
+    }
+
+    public Date getDate_time() {
+        return date_time;
+    }
+
+    public void setDate_time(Date date_time) {
+        this.date_time = date_time;
+    }
+
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 }

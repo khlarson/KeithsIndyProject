@@ -28,8 +28,6 @@ public class EventsController extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         //Store photos/names/descriptions in categories
-        //call return method
-
         logger.info("In the doGet()");
 
         EventTypesDAO eventTypeDAO = new EventTypesDAO();
@@ -38,8 +36,8 @@ public class EventsController extends HttpServlet {
         req.setAttribute("eventTypes", eventTypeDAO.getAllEventTypes());
         //TODO set the tag in a 'properties file'
         req.setAttribute("msg", MsgsDao.getMsgByTag("EventsCategoryWelcome"));
-
-
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/Events.jsp");
+        dispatcher.forward(req, resp);
 
     }
 }

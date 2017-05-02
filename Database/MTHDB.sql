@@ -16,18 +16,15 @@ CREATE DATABASE MTH;
 USE DATABASE MTH;
 
 create table User (
-   User_id INT NOT NULL AUTO_INCREMENT,
-   UserName VARCHAR(15) NOT NULL,
-   FirstName VARCHAR(20) NOT NULL,
-   LastName VARCHAR(20) NOT NULL,
-   Email VARCHAR(20) NOT NULL,
-   Password VARCHAR(15) NOT NULL,
-   Submission_date DATE,
-   PRIMARY KEY ( User_id )
+   user_id INT NOT NULL AUTO_INCREMENT,
+   userName VARCHAR(15) NOT NULL,
+   firstName VARCHAR(20) NOT NULL,
+   lastName VARCHAR(20) NOT NULL,
+   email VARCHAR(20) NOT NULL,
+   password VARCHAR(15) NOT NULL,
+   submission_date DATE,
+   PRIMARY KEY ( user_id )
 );
-
-
---table to edit roles
 
 CREATE USER 'tomcat'@'localhost' IDENTIFIED BY 'tomcat';
 
@@ -36,20 +33,6 @@ User_id         varchar(15) not null,
 role_name         varchar(15) not null,
 primary key (user_name, role_name)
 );
-
---roles to have 
-	--admin
-		--(can delete and search users. {LOCK DOWN}
-		--(can do full crud for AdminTrips. {LOCK DOWN}
-		--(can delete and search user trips. {LOCK DOWN}
-		--(can do full crud for Locations.{LOCK DOWN}
-		--(can do full crud for Sponsors.{LOCK DOWN}
-		--(can do full crud for Msgs.{LOCK DOWN}
-		--(full crud on work scedule
-	--staff
-		--(View work scedule and staffchat {msgs subtag}
-
-
 
 GRANT SELECT ON sample.* TO 'tomcat'@'localhost';
 
@@ -75,62 +58,63 @@ insert into user_roles values ('admin', 'administrator');
 
 
 create table Sponsor (
-   Sponsor_id INT NOT NULL AUTO_INCREMENT,
-   Photo_id INT(20),				--REFERENCE ISSUES LIST AT TOP {ISSUE 4}
-   Name VARCHAR(20) NOT NULL,
-   WebsiteURL VARCHAR(20) NOT NULL,
-   Description VARCHAR(200) NOT NULL,
-   PRIMARY KEY ( Sponsor_id )
+   sponsor_id INT NOT NULL AUTO_INCREMENT,
+   name VARCHAR(20) NOT NULL,
+   website VARCHAR(100) NOT NULL,
+   twitter VARCHAR(100) NOT NULL,
+   facebook VARCHAR(100) NOT NULL,
+   description VARCHAR(200) NOT NULL,
+   photo VARCHAR(25) NOT NULL,
+   PRIMARY KEY ( sponsor_id )
 );
 
+//INSERT INTO Sponsor (name, website, twitter, facebook, description, photo) VALUES('Ians Pizza', 'https://ianspizza.com/', 'https://twitter.com/IansMadison?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor', 'https://www.facebook.com/IansPizzaMadison/', 'Ians is a pizza by the slice joint who pays amir money', '');
+
 create table Location (
-   Location_id INT NOT NULL AUTO_INCREMENT,
+   location_id INT NOT NULL AUTO_INCREMENT,
    name VARCHAR(20) NOT NULL,
    description VARCHAR(200) NOT NULL,
    tag VARCHAR(20) NOT NULL,
-   PRIMARY KEY ( Location_id )
+   website VARCHAR(20) NOT NULL,
+   address VARCHAR(100) NOT NULL,
+   PRIMARY KEY ( location_id )
 );
 
-create table AdminTrip (
-   AdminTrip_id INT NOT NULL AUTO_INCREMENT,
-   Name VARCHAR(20) NOT NULL,
-   Description VARCHAR(200) NOT NULL,
+
+create table Event (
+   event_id INT NOT NULL AUTO_INCREMENT,
+   name VARCHAR(20) NOT NULL,
+   description VARCHAR(200) NOT NULL,
    tag VARCHAR(20) NOT NULL,
-   ApproxamateTime TIME,			--REFERENCE ISSUES LIST AT TOP {ISSUE 4}
-   PRIMARY KEY ( AdminTrip_id )
-); 
-
-create table Trip (
-   Trip_id INT NOT NULL AUTO_INCREMENT,
-   Name VARCHAR(20) NOT NULL,
-   Description VARCHAR(200) NOT NULL,
-   tag VARCHAR(20) NOT NULL,
-   ApproxamateTime TIME,			--REFERENCE ISSUES LIST AT TOP {ISSUE 3}
-   PRIMARY KEY ( Trip_id )
+   approxomateTime VARCHAR(20) NOT NULL,
+   adminCreated VARCHAR(1) NOT NULL,
+   adminApproved VARCHAR(1) NOT NULL,
+   PRIMARY KEY ( event_id )
 );
 
-create table UserTrip (
-   UserTrip_id INT NOT NULL AUTO_INCREMENT,
-   Trip_id INT(20),				--REFERENCE ISSUES LIST AT TOP {ISSUE 4}
-   User_id INT(20),				--REFERENCE ISSUES LIST AT TOP {ISSUE 4}
-   PRIMARY KEY ( UserTrip_id )
+
+create table Event_Location (
+   EventLocation_id INT NOT NULL AUTO_INCREMENT,
+   event_id INT(20),
+   location_id INT(20),
+   PRIMARY KEY ( EventLocation_id )
 );
 
-create table TripLocation (
-   TripLocation_id INT NOT NULL AUTO_INCREMENT,
-   Trip_id INT(20),				--REFERENCE ISSUES LIST AT TOP {ISSUE 4}
-   Location_id INT(20),				--REFERENCE ISSUES LIST AT TOP {ISSUE 4}
-   PRIMARY KEY ( TripLocation_id )
+CREATE TABLE Msgs (
+  msg_id INT NOT NULL AUTO_INCREMENT,
+  user_id INT(20),
+  title VARCHAR(30) NOT NULL,
+  content VARCHAR(400) NOT NULL,
+  tag VARCHAR(20) NOT NULL,
+  date_time datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY ( msg_id )
 );
 
-create table Msgs (
-   Msgid INT NOT NULL AUTO_INCREMENT,
-   User_id INT(20),
-   content VARCHAR(200) NOT NULL,
-   tag VARCHAR(20) NOT NULL,
-   submission_date DATE,
-   PRIMARY KEY ( Msgid )
-);
+ALTER TABLE Msgs
+ADD title VARCHAR(30) NOT NULL;
+
+//INSERT INTO Msgs (user_id, title, content, tag) VALUES('1', 'How it all started...', 'This business began with a simple idea; people should be able to get around madison without worrying about the price of....', 'AboutUs1');
+//INSERT INTO Msgs (user_id, title, content, tag) VALUES('1', 'Why advertise with us?', 'We at the Hopper are able offer our services in large part due to our sponsors. Now you may ask what our sponsors get in return...', 'Sponsor1');
 
 create table AdminMsgs (
    Msgid INT NOT NULL AUTO_INCREMENT,
@@ -142,26 +126,12 @@ create table AdminMsgs (
 );
 
 create table Photo (
-   Photo_id INT NOT NULL AUTO_INCREMENT,
-   Name VARCHAR(20) NOT NULL,
-   Tag VARCHAR(20) NOT NULL,
-   Photo ???????, 				--REFERENCE ISSUES LIST AT TOP {ISSUE 2}
-   Description VARCHAR(40),
-   Approved BOOL???, 				--REFERENCE ISSUES LIST AT TOP {ISSUE 1}
-   Submission_date DATE,
+   photo_id INT NOT NULL AUTO_INCREMENT,
+   tag VARCHAR(20) NOT NULL,
+   photo VARCHAR(20) NOT NULL,
+   description VARCHAR(40),
+   approved VARCHAR(1),
+   submission_date DATE,
    PRIMARY KEY ( photo_id )
 );
 
-create table UserPhoto (
-   UserPhoto_id INT NOT NULL AUTO_INCREMENT,
-   Photo_id INT(20),				--REFERENCE ISSUES LIST AT TOP {ISSUE 4}
-   User_id INT(20),				--REFERENCE ISSUES LIST AT TOP {ISSUE 4}
-   PRIMARY KEY ( UserPhoto_id )
-);
-
-create table TripPhoto (
-   TripPhoto_id INT NOT NULL AUTO_INCREMENT,
-   Photo_id INT(20),				--REFERENCE ISSUES LIST AT TOP {ISSUE 4}
-   Trip_id INT(20),				--REFERENCE ISSUES LIST AT TOP {ISSUE 4}
-   PRIMARY KEY ( TripPhoto_id )
-);

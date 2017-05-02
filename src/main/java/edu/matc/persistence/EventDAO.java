@@ -13,13 +13,13 @@ import java.util.List;
 public class EventDAO {
 
     //TODO return all events with matching ids
-    public List<Event> getEventsById(int eventid) {
-        List<Event> events = new ArrayList<Event>();
-        Session session = SessionFactoryProvider.getSessionFactory().openSession();
-        events = session.createCriteria(Event.class, eventid).list();
-        session.close();
-        return events;
-    }
+    //public List<Event> getEventsById(int eventid) {
+        //List<Event> events = new ArrayList<Event>();
+        //Session session = SessionFactoryProvider.getSessionFactory().openSession();
+        //events = session.createCriteria(Event.class, eventid).list();
+        //session.close();
+        //return events;
+    //}
 
 
     public void deleteEvent(Event event, Location location){

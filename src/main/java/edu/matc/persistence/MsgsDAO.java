@@ -53,10 +53,12 @@ public class MsgsDAO {
      * @param tag the msg's tag
      * @return msgs
      */
+    //TODO by tag not currently working
     public List<Msgs> getMsgByTag(String tag) {
-        List<Msgs> msgs = new ArrayList<Msgs>();
+        List<Msgs> msgs;
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
         msgs = session.createCriteria(Msgs.class, tag).list();
+        log.info("Messages within the msg list: " + msgs + "***********************************************************");
         session.close();
         return msgs;
     }

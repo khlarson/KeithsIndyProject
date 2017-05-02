@@ -21,25 +21,34 @@ public class Event {
     @Id
     @GeneratedValue(generator="increment")
     @GenericGenerator(name="increment", strategy = "increment")
-    @Column(name = "id")
-    private int eventid;
+    @Column(name = "event_id")
+    private int event_id;
 
-    @Column(name = "eventName")
-    private String eventName;
+    @Column(name = "name")
+    private String name;
 
     @Column(name = "description")
     private String description;
 
-    @Column(name="category")
-    private String category;
+    @Column(name="tag")
+    private String tag;
 
-    @Column(name="photo")
-    private String photo;
+    @Column(name="approxomateTime")
+    private String approxomateTime;
+
+    @Column(name="adminCreated")
+    private String adminCreated;
+
+    @Column(name="adminApproved")
+    private String adminApproved;
+
+    @Column(name="map")
+    private String map;
 
     @ManyToMany(cascade = {CascadeType.ALL})
     @JoinTable(name="Event_Location",
-            joinColumns={@JoinColumn(name="eventid")},
-            inverseJoinColumns={@JoinColumn(name="locationid")})
+            joinColumns={@JoinColumn(name="event_id")},
+            inverseJoinColumns={@JoinColumn(name="location_id")})
 
     private List<Location> locations;
 
@@ -53,17 +62,21 @@ public class Event {
     /**
      * Instantiates a new User.
      *
-     * @param eventName   the event name
+     * @param name   the event name
      * @param description    the description
-     * @param category    the category
-     * @param photo    the location of the photo
+     * @param tag    the tag
+     * @param map    the location of the map
 
      */
-    public Event(String eventName, String description, String category, String photo, List<Location> locations) {
-        this.eventName = eventName;
+    public Event(String name, String description, String tag, String map, String approxomateTime, String adminApproved, String adminCreated, List<Location> locations) {
+        this.name = name;
         this.description = description;
-        this.category = category;
-        this.photo = photo;
+        this.tag = tag;
+        this.approxomateTime = approxomateTime;
+        //TODO change adminCreated to user_id
+        this.adminCreated = adminCreated;
+        this.adminApproved = adminApproved;
+        this.map = map;
         this.locations = locations;
     }
 
@@ -80,35 +93,35 @@ public class Event {
      *
      * @return the eventid
      */
-    public int getEventid() {
-        return eventid;
+    public int getEvent_id() {
+        return event_id;
     }
 
     /**
      * Sets eventid.
      *
-     * @param eventid the eventid
+     * @param event_id the eventid
      */
-    public void setEventid(int eventid) {
-        this.eventid = eventid;
+    public void setEvent_id(int event_id) {
+        this.event_id = event_id;
     }
 
     /**
-     * Gets eventName.
+     * Gets name.
      *
-     * @return the eventName
+     * @return the name
      */
-    public String getEventName() {
-        return eventName;
+    public String getName() {
+        return name;
     }
 
     /**
-     * Sets eventName.
+     * Sets name.
      *
-     * @param eventName the eventName
+     * @param name the eventName
      */
-    public void setEventName(String eventName) {
-        this.eventName = eventName;
+    public void setName(String name) {
+        this.name = name;
     }
 
     /**
@@ -129,41 +142,44 @@ public class Event {
         this.description = description;
     }
 
-    /**
-     * Gets category.
-     *
-     * @return the category
-     */
-    public String getCategory() {
-        return category;
+    public String getTag() {
+        return tag;
     }
 
-    /**
-     * Sets category.
-     *
-     * @param category the category
-     */
-    public void setCategory(String category) {
-        this.category = category;
+    public void setTag(String tag) {
+        this.tag = tag;
     }
 
-    /**
-     * Gets photo.
-     *
-     * @return the photo
-     */
-    public String getPhoto() {
-        return photo;
+    public String getApproxomateTime() {
+        return approxomateTime;
     }
 
-    /**
-     * Sets photo.
-     *
-     * @param photo the photo
-     */
-    public void setPhoto(String photo) {
-        this.photo = photo;
+    public void setApproxomateTime(String approxomateTime) {
+        this.approxomateTime = approxomateTime;
     }
 
+    public String getAdminCreated() {
+        return adminCreated;
+    }
+
+    public void setAdminCreated(String adminCreated) {
+        this.adminCreated = adminCreated;
+    }
+
+    public String getAdminApproved() {
+        return adminApproved;
+    }
+
+    public void setAdminApproved(String adminApproved) {
+        this.adminApproved = adminApproved;
+    }
+
+    public String getMap() {
+        return map;
+    }
+
+    public void setMap(String map) {
+        this.map = map;
+    }
 }
 

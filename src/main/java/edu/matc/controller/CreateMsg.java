@@ -41,10 +41,11 @@ public class CreateMsg extends HttpServlet {
             //boolean isUserInRole(java.lang.String role)
             //use to check if a user should be able to create a msg
 
+        String title = req.getParameter("title");
         String content = req.getParameter("content");
         String tag = req.getParameter("tag");
 
-        Msgs msg = new Msgs(userid, content, tag);
+        Msgs msg = new Msgs(userid, title, content, tag);
         req.setAttribute("msgs", msgDao.addMsg(msg));
         RequestDispatcher dispatcher = req.getRequestDispatcher("/addMsgSuccess.jsp");
         dispatcher.forward(req, resp);

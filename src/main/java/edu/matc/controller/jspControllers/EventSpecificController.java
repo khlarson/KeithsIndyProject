@@ -1,6 +1,6 @@
 package edu.matc.controller.jspControllers;
 
-import edu.matc.api.googlemaps;
+//import edu.matc.api.googlemaps;
 import edu.matc.persistence.EventDAO;
 import edu.matc.persistence.EventTypesDAO;
 import edu.matc.persistence.MsgsDAO;
@@ -36,7 +36,7 @@ public class EventSpecificController extends HttpServlet {
         String eventid = req.getParameter("eventid");
         int id = Integer.parseInt(eventid);
 
-        req.setAttribute("event", eventDAO.getEventById(id));
+        //req.setAttribute("event", eventDAO.getEventById(id));
 
         //Set page
         //TODO set the tag in a 'properties file'

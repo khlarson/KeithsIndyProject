@@ -24,7 +24,9 @@ public class SponsorDAO {
     public List<Sponsor> getAllSponsors() {
         List<Sponsor> sponsors = new ArrayList<Sponsor>();
         Session session = SessionFactoryProvider.getSessionFactory().openSession();
-        sponsors = session.createCriteria(User.class).list();
+        log.info("prepare to search criteria");
+        sponsors = session.createCriteria(Sponsor.class).list();
+        log.info("sponsors list: " + sponsors);
         session.close();
         return sponsors;
     }

@@ -3,6 +3,7 @@ package edu.matc.controller.jspControllers;
 import edu.matc.persistence.MsgsDAO;
 import edu.matc.persistence.SponsorDAO;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
@@ -28,9 +29,13 @@ public class SponsorController extends HttpServlet {
 
         //get sponsors
         req.setAttribute("sponsors", sponsorDAO.getAllSponsors());
-        //Set page
+
         //TODO set the tag in a 'properties file'
-        req.setAttribute("msg", MsgsDao.getMsgByTag("EventsCategoryWelcome"));
+        req.setAttribute("msg", MsgsDao.getMsg(3));
+
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/Sponsor.jsp");
+        dispatcher.forward(req, resp);
+
 
     }
 }

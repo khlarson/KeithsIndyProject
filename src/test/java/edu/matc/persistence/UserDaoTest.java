@@ -1,3 +1,4 @@
+/**
 package edu.matc.persistence;
 
 import edu.matc.entity.User;
@@ -9,12 +10,13 @@ import java.time.LocalDate;
 import java.util.*;
 
 import static org.junit.Assert.*;
-
+*/
 /**
  * Created on 9/13/16.
  *
  * @author khlarson
  */
+/**
 public class UserDaoTest {
 
     UserDao dao;
@@ -74,3 +76,4 @@ public class UserDaoTest {
     }
 
 }
+*/

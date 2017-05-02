@@ -4,13 +4,6 @@
 		<meta charset="utf-8">
 
 		<title>The Mad Town Hopper</title>
-<!--
-
-Template 2081 Solution
-
-http://www.tooplate.com/view/2081-solution
-
--->
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -45,10 +38,10 @@ http://www.tooplate.com/view/2081-solution
 				<div class="collapse navbar-collapse">
 					<ul class="nav navbar-nav navbar-right">
 						<li><a href="home.jsp">Home</a></li>
-						<li><a href="Sponsor.jsp">Sponsor</a></li>
-						<li><a href="Events.jsp">Special Events</a></li>
+						<li><a href="/AboutUsController">About Us</a></li>
+						<li><a href="/SponsorController">Sponsor</a></li>
+						<li><a href="/EventsController">Catered Events</a></li>
 						<li><a href="#team">Memories</a></li>
-						<li><a href="#pricing">Contact Us</a></li>
 						<li><a href="#portfolio">Donate</a></li>
 					</ul>
 				</div>
@@ -73,7 +66,7 @@ http://www.tooplate.com/view/2081-solution
 							<span>Offering free rides to all in the downtown area</span>
 						</h2>
 						<!-- this should only be displayed when user is not signed in  -->
-						<a href="#service" class="smoothScroll btn btn-default wow fadeInDown" data-wow-delay="2000">Sign In/Sign Up</a>
+						<a href="adminrestricted/admin.jsp" class="smoothScroll btn btn-default wow fadeInDown" data-wow-delay="2000">Sign In/Sign Up</a>
 							<a href="#service" class="smoothScroll btn btn-default wow fadeInDown" data-wow-delay="2000">Continue as Guest</a>
 					    </div>
 				  	</div>
@@ -119,17 +112,13 @@ http://www.tooplate.com/view/2081-solution
 			<div class="container">
 				<div class="row">
 					<div class="col-md-8 col-sm-7">
-						<p>Copyright &copy; 2016 Solution Company</p>
-						<small>Designed by <a rel="nofollow" href="http://www.tooplate.com" target="_parent">Tooplate</a></small>
+						<p>Contact Info</p>
 					</div>
 					<div class="col-md-4 col-sm-5">
 						<ul class="social-icon">
-							<li><a href="#" class="fa fa-facebook"></a></li>
-							<li><a href="#" class="fa fa-twitter"></a></li>
-							<li><a href="#" class="fa fa-instagram"></a></li>
-							<li><a href="#" class="fa fa-pinterest"></a></li>
-							<li><a href="#" class="fa fa-google"></a></li>
-							<li><a href="#" class="fa fa-github"></a></li>
+							<li><a href="https://www.facebook.com/HopperRides/" class="fa fa-facebook"></a></li>
+							<li><a href="https://twitter.com/madtownhopper?lang=en" class="fa fa-twitter"></a></li>
+							<li><a href="https://www.instagram.com/hopperrides/" class="fa fa-instagram"></a></li>
 						</ul>
 					</div>
 				</div>
