@@ -68,7 +68,7 @@ public class Event {
      * @param map    the location of the map
 
      */
-    public Event(String name, String description, String tag, String map, String approxomateTime, String adminApproved, String adminCreated, List<Location> locations) {
+    public Event(String name, String description, String tag, String approxomateTime, String adminApproved, String adminCreated, String map, List<Location> locations) {
         this.name = name;
         this.description = description;
         this.tag = tag;

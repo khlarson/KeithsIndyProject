@@ -49,13 +49,12 @@ public class UserDao {
      * @param user
      * @return the id of the inserted record
      */
-    public int addUser(User user) {
-        int id = 0 ;
+    public void addUser(User user) {
         Session session = SessionFactoryProvider.getSessionFactory().openSession() ;
         Transaction tx = null ;
         try {
             tx = session.beginTransaction();
-            id = (int) session.save(user);
+            session.save(user);
             tx.commit();
         }
         catch (HibernateException e) {
@@ -67,7 +66,6 @@ public class UserDao {
         finally {
             session.close() ;
         }
-        return id ;
     }
 
     /**

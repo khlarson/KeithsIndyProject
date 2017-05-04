@@ -19,17 +19,15 @@ import java.io.IOException;
  */
 
 @WebServlet(
-        urlPatterns = {"/createUser"}
+        urlPatterns = {"/CreateUser"}
 )
 
 public class CreateUser extends HttpServlet {
 
-    private final Logger logger = Logger.getLogger(this.getClass());
+    private final Logger log = Logger.getLogger(this.getClass());
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-        //TODO EDIT RUN CONFIG!!!!
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         UserDao userDao = new UserDao();
 
@@ -40,11 +38,15 @@ public class CreateUser extends HttpServlet {
         String password = req.getParameter("password");
         String passwordConfirmed = req.getParameter("passwordConfirmed");
 
-        //TODO check out hibernate validator for back end and bootstrap for front end
+        System.out.println(password);
+        System.out.println(passwordConfirmed);
+
+        log.info("1: ******************************** " + password);
+        log.info("2: ******************************** " + passwordConfirmed);
         if (password.equals(passwordConfirmed)) {
             User user = new User(userName, firstName, lastName, email, password);
-            req.setAttribute("users", userDao.addUser(user));
-            RequestDispatcher dispatcher = req.getRequestDispatcher("/UserHome.jsp");
+            userDao.addUser(user);
+            RequestDispatcher dispatcher = req.getRequestDispatcher("/AboutUs.jsp");
             dispatcher.forward(req, resp);
         } else {
             RequestDispatcher dispatcher = req.getRequestDispatcher("/createUserFailed.jsp");

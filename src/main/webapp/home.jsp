@@ -67,7 +67,7 @@
 						</h2>
 						<!-- this should only be displayed when user is not signed in  -->
 						<a href="adminrestricted/admin.jsp" class="smoothScroll btn btn-default wow fadeInDown" data-wow-delay="2000">Sign In/Sign Up</a>
-							<a href="#service" class="smoothScroll btn btn-default wow fadeInDown" data-wow-delay="2000">Continue as Guest</a>
+							<a href="/AboutUsController" class="smoothScroll btn btn-default wow fadeInDown" data-wow-delay="2000">Continue as Guest</a>
 					    </div>
 				  	</div>
 		        </li>

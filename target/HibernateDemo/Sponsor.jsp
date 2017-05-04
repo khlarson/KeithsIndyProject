@@ -43,7 +43,6 @@
                 <li><a href="/SponsorController">Sponsor</a></li>
                 <li><a href="/EventsController">Catered Events</a></li>
                 <li><a href="#team">Memories</a></li>
-                <li><a href="#pricing">Contact Us</a></li>
                 <li><a href="#portfolio">Donate</a></li>
             </ul>
         </div>

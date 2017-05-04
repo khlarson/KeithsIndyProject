@@ -47,13 +47,12 @@ public class Location {
     public Location() {
     }
 
-    public Location(String name, String tag, String description, String website, String address, int location_ID) {
+    public Location(String name, String description, String tag, String website, String address) {
         this.name = name;
         this.tag = tag;
         this.description = description;
         this.website = website;
         this.address = address;
-        this.location_ID = location_ID;
     }
 
     /**

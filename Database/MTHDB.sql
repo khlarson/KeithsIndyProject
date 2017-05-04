@@ -20,7 +20,7 @@ create table User (
    userName VARCHAR(15) NOT NULL,
    firstName VARCHAR(20) NOT NULL,
    lastName VARCHAR(20) NOT NULL,
-   email VARCHAR(20) NOT NULL,
+   email VARCHAR(40) NOT NULL,
    password VARCHAR(15) NOT NULL,
    submission_date DATE,
    PRIMARY KEY ( user_id )
@@ -110,8 +110,18 @@ CREATE TABLE Msgs (
   PRIMARY KEY ( msg_id )
 );
 
-ALTER TABLE Msgs
-ADD title VARCHAR(30) NOT NULL;
+ALTER TABLE Location
+MODIFY name VARCHAR(50) NOT NULL;
+
+
+ALTER TABLE Event
+ADD map VARCHAR(100) NOT NULL;
+
+ALTER TABLE Location
+ADD name VARCHAR(50) NOT NULL;
+
+ALTER TABLE Location
+ADD name VARCHAR(50) NOT NULL;
 
 //INSERT INTO Msgs (user_id, title, content, tag) VALUES('1', 'How it all started...', 'This business began with a simple idea; people should be able to get around madison without worrying about the price of....', 'AboutUs1');
 //INSERT INTO Msgs (user_id, title, content, tag) VALUES('1', 'Why advertise with us?', 'We at the Hopper are able offer our services in large part due to our sponsors. Now you may ask what our sponsors get in return...', 'Sponsor1');

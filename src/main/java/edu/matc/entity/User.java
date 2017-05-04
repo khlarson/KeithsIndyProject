@@ -6,6 +6,7 @@ import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.Period;
+import java.util.Date;
 
 import static java.time.LocalDate.now;
 
@@ -15,13 +16,13 @@ import static java.time.LocalDate.now;
  * @author //khlarson
  */
 @Entity
-@Table(name = "users")
+@Table(name = "User")
 public class User {
     @Id
     @GeneratedValue(generator="increment")
     @GenericGenerator(name="increment", strategy = "increment")
-    @Column(name = "id")
-    private int userid;
+    @Column(name = "user_id")
+    private int user_id;
 
     @Column(name = "userName")
     private String userName;
@@ -37,6 +38,10 @@ public class User {
 
     @Column(name="password")
     private String password;
+
+    @Column(name = "submission_date", columnDefinition="DATETIME")
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date submission_date;
 
     /**
      * Instantiates a new User.
@@ -116,21 +121,21 @@ public class User {
     }
 
     /**
-     * Gets userid.
+     * Gets user_id.
      *
-     * @return the userid
+     * @return the user_id
      */
-    public int getUserid() {
-        return userid;
+    public int getUser_id() {
+        return user_id;
     }
 
     /**
-     * Sets userid.
+     * Sets user_id.
      *
-     * @param userid the userid
+     * @param user_id the user_id
      */
-    public void setUserid(int userid) {
-        this.userid = userid;
+    public void setUser_id(int user_id) {
+        this.user_id = user_id;
     }
 
     /**
@@ -163,9 +168,17 @@ public class User {
     /**
      * Sets email
      *
-     * @param email the email
+     * @param password the email
      */
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public Date getSubmission_date() {
+        return submission_date;
+    }
+
+    public void setSubmission_date(Date submission_date) {
+        this.submission_date = submission_date;
     }
 }

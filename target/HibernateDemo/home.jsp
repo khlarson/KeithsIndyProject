@@ -42,7 +42,6 @@
 						<li><a href="/SponsorController">Sponsor</a></li>
 						<li><a href="/EventsController">Catered Events</a></li>
 						<li><a href="#team">Memories</a></li>
-						<li><a href="#pricing">Contact Us</a></li>
 						<li><a href="#portfolio">Donate</a></li>
 					</ul>
 				</div>
@@ -68,7 +67,7 @@
 						</h2>
 						<!-- this should only be displayed when user is not signed in  -->
 						<a href="adminrestricted/admin.jsp" class="smoothScroll btn btn-default wow fadeInDown" data-wow-delay="2000">Sign In/Sign Up</a>
-							<a href="#service" class="smoothScroll btn btn-default wow fadeInDown" data-wow-delay="2000">Continue as Guest</a>
+							<a href="/AboutUsController" class="smoothScroll btn btn-default wow fadeInDown" data-wow-delay="2000">Continue as Guest</a>
 					    </div>
 				  	</div>
 		        </li>
@@ -113,17 +112,13 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-8 col-sm-7">
-						<p>Copyright &copy; 2016 Solution Company</p>
-						<small>Designed by <a rel="nofollow" href="http://www.tooplate.com" target="_parent">Tooplate</a></small>
+						<p>Contact Info</p>
 					</div>
 					<div class="col-md-4 col-sm-5">
 						<ul class="social-icon">
-							<li><a href="#" class="fa fa-facebook"></a></li>
-							<li><a href="#" class="fa fa-twitter"></a></li>
-							<li><a href="#" class="fa fa-instagram"></a></li>
-							<li><a href="#" class="fa fa-pinterest"></a></li>
-							<li><a href="#" class="fa fa-google"></a></li>
-							<li><a href="#" class="fa fa-github"></a></li>
+							<li><a href="https://www.facebook.com/HopperRides/" class="fa fa-facebook"></a></li>
+							<li><a href="https://twitter.com/madtownhopper?lang=en" class="fa fa-twitter"></a></li>
+							<li><a href="https://www.instagram.com/hopperrides/" class="fa fa-instagram"></a></li>
 						</ul>
 					</div>
 				</div>
