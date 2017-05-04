@@ -2,13 +2,8 @@ package edu.matc.controller;
 
 import edu.matc.api.Googlemaps;
 import edu.matc.entity.Event;
-import edu.matc.entity.Location;
-import edu.matc.entity.User;
 import edu.matc.persistence.EventDAO;
-import edu.matc.persistence.LocationDAO;
-import edu.matc.persistence.UserDao;
 import org.apache.log4j.Logger;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -20,7 +15,6 @@ import java.util.List;
 
 
 /**
- * A simple servlet to welcome the user.
  * @author khlarson
  */
 
@@ -43,18 +37,18 @@ public class CreateEvent extends HttpServlet {
         String approxomateTime = req.getParameter("approxomateTime");
         String adminCreated = "1";
         String adminApproved = "1";
-        List<Location> locations = req.getParameterValues("location");
+        //List<String> locations = req.getParameterValues("locations");
 
         //list locations
         Googlemaps gmaps = new Googlemaps();
 
-        String map = gmaps.makeMap(locations);
+        //String map = gmaps.makeMap(locations);
         //setup first map
 
 
         //TODO add validation
-        Event event = new Event(name, description, tag, approxomateTime, adminCreated, adminApproved, map, locations);
-        eventDAO.addEvent(event);
+        //Event event = new Event(name, description, tag, approxomateTime, adminCreated, adminApproved, map, locations);
+        //eventDAO.addEvent(event);
         //send event to a select locations
         RequestDispatcher dispatcher = req.getRequestDispatcher("/AboutUs.jsp");
         dispatcher.forward(req, resp);

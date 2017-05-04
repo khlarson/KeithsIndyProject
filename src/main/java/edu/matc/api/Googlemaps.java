@@ -21,8 +21,8 @@ public class Googlemaps {
     public String makeMap(List<Location> locations) throws MalformedURLException, IOException {
         String urlLocations = createLocationsString(locations);
         String parameters = "Madison,WI" + "&zoom=14&size=400x400" + urlLocations + "&key=AIzaSyBy_nDPQJnsmbKsZ0WSDlpDcnnfFVvzMN0";
-        String googleMappsStaticEndPoint = "https://maps.googleapis.com/maps/api/staticmap?";
-        InputStream in = new URL(googleMappsStaticEndPoint + parameters).openStream();
+        String googleMapsStaticEndPoint = "https://maps.googleapis.com/maps/api/staticmap?";
+        InputStream in = new URL(googleMapsStaticEndPoint + parameters).openStream();
         //declares a random unique string to hold the value of the photo
         String fileName = UUID.randomUUID().toString() + ".PNG";
         Files.copy(in, Paths.get("../../../webapp/maps" + fileName));

@@ -1,3 +1,4 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -64,6 +65,10 @@
             </select><br>
             Estimated Time:<br>
             <input type="text" name="approxomateTime" placeholder="00:00" style="text-align:center;"><br>
+            <c:forEach var="location" items="${locations}" >
+                Choose Locations to Include:<br>
+                <input type="checkbox" name="location" value="${location}"> ${location.name}<br>
+            </c:forEach>
             <INPUT TYPE="SUBMIT" VALUE="Continue and add locations to events">
         </form>
         <br>

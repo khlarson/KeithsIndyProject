@@ -16,7 +16,7 @@ import static java.time.LocalDate.now;
  * @author //khlarson
  */
 @Entity
-@Table(name = "events")
+@Table(name = "Event")
 public class Event {
     @Id
     @GeneratedValue(generator="increment")

@@ -73,7 +73,7 @@
             </div>
             <c:forEach var="sponsor" items="${sponsors}" >
             <div class="col-md-4 col-sm-4 wow fadeIn" data-wow-delay="0.3s">
-                <!--<img src="images/team1.jpg" class="img-responsive" alt="team img">-->
+                <img src="mapss/ians.jpg" class="img-responsive" alt="team img">
                 <h3>${sponsor.name}</h3>
                 <p>${sponsor.description}</p>
                 <ul class="social-icon text-center">
@@ -93,8 +93,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-sm-7">
-                <p>Copyright &copy; 2016 Solution Company</p>
-                <small>Designed by <a rel="nofollow" href="http://www.tooplate.com" target="_parent">Tooplate</a></small>
+                <p>Contact Mad Town Hopper</p>
             </div>
             <div class="col-md-4 col-sm-5">
                 <ul class="social-icon">
