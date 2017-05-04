@@ -35,7 +35,7 @@
                 <span class="icon icon-bar"></span>
                 <span class="icon icon-bar"></span>
             </button>
-            <a href="#" class="navbar-brand"><img src="images/hopperLogo1.png" class="img-responsive" alt="logo"></a>
+            <a href="#" class="navbar-brand"><img src="maps/Capture.PNG" class="img-responsive" alt="logo"></a>
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
@@ -97,17 +97,13 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-sm-7">
-                <p>Copyright &copy; 2016 Solution Company</p>
-                <small>Designed by <a rel="nofollow" href="http://www.tooplate.com" target="_parent">Tooplate</a></small>
+                <p>Contact Info</p>
             </div>
             <div class="col-md-4 col-sm-5">
                 <ul class="social-icon">
-                    <li><a href="#" class="fa fa-facebook"></a></li>
-                    <li><a href="#" class="fa fa-twitter"></a></li>
-                    <li><a href="#" class="fa fa-instagram"></a></li>
-                    <li><a href="#" class="fa fa-pinterest"></a></li>
-                    <li><a href="#" class="fa fa-google"></a></li>
-                    <li><a href="#" class="fa fa-github"></a></li>
+                    <li><a href="https://www.facebook.com/HopperRides/" class="fa fa-facebook"></a></li>
+                    <li><a href="https://twitter.com/madtownhopper?lang=en" class="fa fa-twitter"></a></li>
+                    <li><a href="https://www.instagram.com/hopperrides/" class="fa fa-instagram"></a></li>
                 </ul>
             </div>
         </div>

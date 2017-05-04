@@ -34,7 +34,7 @@
                 <span class="icon icon-bar"></span>
                 <span class="icon icon-bar"></span>
             </button>
-            <a href="#" class="navbar-brand"><img src="images/hopperLogo1.png" class="img-responsive" alt="logo"></a>
+            <a href="#" class="navbar-brand"><img src="maps/Capture.PNG" class="img-responsive" alt="logo"></a>
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
@@ -77,9 +77,6 @@
 <!-- end home -->
 
 
-<!-- Sponsors should be grabbed from table and displayed in div HERE   -->
-
-
 <!-- start footer -->
 <footer>
     <div class="container">
@@ -98,6 +95,7 @@
     </div>
 </footer>
 <!-- end footer -->
+
 
 
 <!-- jQuery -->

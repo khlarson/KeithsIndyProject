@@ -33,7 +33,7 @@
                 <span class="icon icon-bar"></span>
                 <span class="icon icon-bar"></span>
             </button>
-            <a href="#" class="navbar-brand"><img src="images/hopperLogo1.png" class="img-responsive" alt="logo"></a>
+            <a href="#" class="navbar-brand"><img src="maps/Capture.PNG" class="img-responsive" alt="logo"></a>
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
@@ -48,6 +48,7 @@
     </div>
 </div>
 <!-- end navigation -->
+
 
 <section class="text-center">
     <div class="templatemo_homewrapper" style="background-color: grey;">

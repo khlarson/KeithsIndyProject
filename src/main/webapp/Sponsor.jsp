@@ -34,7 +34,7 @@
                 <span class="icon icon-bar"></span>
                 <span class="icon icon-bar"></span>
             </button>
-            <a href="#" class="navbar-brand"><img src="images/hopperLogo1.png" class="img-responsive" alt="logo"></a>
+            <a href="#" class="navbar-brand"><img src="maps/Capture.PNG" class="img-responsive" alt="logo"></a>
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
@@ -73,7 +73,7 @@
             </div>
             <c:forEach var="sponsor" items="${sponsors}" >
             <div class="col-md-4 col-sm-4 wow fadeIn" data-wow-delay="0.3s">
-                <img src="maps/ians.jpg" class="img-responsive" alt="team img">
+                <img src="maps/ians.png" class="img-responsive" alt="team img">
                 <h3>${sponsor.name}</h3>
                 <p>${sponsor.description}</p>
                 <ul class="social-icon text-center">
@@ -87,22 +87,18 @@
     </div>
 </div>
 <!-- end team -->
-
 <!-- start footer -->
 <footer>
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-sm-7">
-                <p>Contact Mad Town Hopper</p>
+                <p>Contact Info</p>
             </div>
             <div class="col-md-4 col-sm-5">
                 <ul class="social-icon">
-                    <li><a href="#" class="fa fa-facebook"></a></li>
-                    <li><a href="#" class="fa fa-twitter"></a></li>
-                    <li><a href="#" class="fa fa-instagram"></a></li>
-                    <li><a href="#" class="fa fa-pinterest"></a></li>
-                    <li><a href="#" class="fa fa-google"></a></li>
-                    <li><a href="#" class="fa fa-github"></a></li>
+                    <li><a href="https://www.facebook.com/HopperRides/" class="fa fa-facebook"></a></li>
+                    <li><a href="https://twitter.com/madtownhopper?lang=en" class="fa fa-twitter"></a></li>
+                    <li><a href="https://www.instagram.com/hopperrides/" class="fa fa-instagram"></a></li>
                 </ul>
             </div>
         </div>
