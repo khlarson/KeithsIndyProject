@@ -73,12 +73,12 @@
             <div class="col-md-12">
                 <h2 class="wow bounce">Meet the team</h2>
             </div>
-            <c:forEach var="eventTypes" items="${eventTypes}" >
+            <c:forEach var="team" items="${Team}" >
             <div class="col-md-4 col-sm-4 wow fadeIn" data-wow-delay="0.3s">
-                <img src=${user.photo} class="img-responsive" alt="team img">
-                <h4>${user.role}</h4>
-                <h3>${user.firstName}</h3>
-                <p>${user.bio}</p>
+                <h4>${team.title}</h4>
+                <img src="TeamPhoto/${team.photo}" class="img-responsive" alt="team img">
+                <h3>${team.name}</h3>
+                <p>${team.bio}</p>
                 <ul class="social-icon text-center">
                     <li><a href="#" class="wow fadeInUp fa fa-facebook" data-wow-delay="2s"></a></li>
                     <li><a href="#" class="wow fadeInDown fa fa-twitter" data-wow-delay="2s"></a></li>

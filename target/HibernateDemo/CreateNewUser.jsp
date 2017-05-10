@@ -64,9 +64,9 @@
             Email:<br>
             <input type="text" name="email"><br>
             Password<br>
-            <input type="text" name="password"><br>
+            <input type="password" name="password"><br>
             Confirm Password<br>
-            <input type="text" name="passwordConfirmed"><br>
+            <input type="password" name="passwordConfirmed"><br>
             <INPUT TYPE="SUBMIT" VALUE="Log In">
         </form>
         <br>

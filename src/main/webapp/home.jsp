@@ -41,8 +41,8 @@
 						<li><a href="/AboutUsController">About Us</a></li>
 						<li><a href="/SponsorController">Sponsor</a></li>
 						<li><a href="/EventsController">Catered Events</a></li>
-						<li><a href="#team">Memories</a></li>
-						<li><a href="#portfolio">Donate</a></li>
+						<li><a href="InProgress.jsp">Memories</a></li>
+						<li><a href="InProgress.jsp">Donate</a></li>
 					</ul>
 				</div>
 			</div>

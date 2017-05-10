@@ -40,7 +40,7 @@ insert into users values ('admin', 'admin');
 // TODO: Based on the requirements, what other user/s do you need to 
 add?
 
-insert into user_roles values ('admin', 'administrator');
+insert into Team values ('Keith Larson', 'Web Developer', 'I enjoy long walks on the beach, code that works on the first compile, beer and breakfast food','test1.jpeg');
 // TODO: Based on the requirements, what other role/s do you need to add?
 
 
@@ -120,11 +120,22 @@ ADD map VARCHAR(100) NOT NULL;
 ALTER TABLE Location
 ADD name VARCHAR(50) NOT NULL;
 
-ALTER TABLE Location
-ADD name VARCHAR(50) NOT NULL;
+ALTER TABLE Team
+ADD photo VARCHAR(50) NOT NULL;
 
 //INSERT INTO Msgs (user_id, title, content, tag) VALUES('1', 'How it all started...', 'This business began with a simple idea; people should be able to get around madison without worrying about the price of....', 'AboutUs1');
 //INSERT INTO Msgs (user_id, title, content, tag) VALUES('1', 'Why advertise with us?', 'We at the Hopper are able offer our services in large part due to our sponsors. Now you may ask what our sponsors get in return...', 'Sponsor1');
+
+
+insert into Team (name, title, bio, photo) values ('TestName', 'Driver', 'Bla bla bla, I drive a cart and do other stuff too','test2.jpg');
+create table Team (
+   team_id INT NOT NULL AUTO_INCREMENT,
+   name VARCHAR(40) NOT NULL,
+   title VARCHAR(40) NOT NULL,
+   bio VARCHAR(200) NOT NULL,
+   PRIMARY KEY ( team_id )
+);
+
 
 create table AdminMsgs (
    Msgid INT NOT NULL AUTO_INCREMENT,

@@ -8,24 +8,25 @@ import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.*;
 import java.io.*;
 
-/**
- * Created by student on 4/27/17.
- */
+import static java.nio.file.StandardCopyOption.REPLACE_EXISTING;
+
 
 public class Googlemaps {
 
     public String makeMap(List<Location> locations) throws MalformedURLException, IOException {
         String urlLocations = createLocationsString(locations);
-        String parameters = "Madison,WI" + "&zoom=14&size=400x400" + urlLocations + "&key=AIzaSyBy_nDPQJnsmbKsZ0WSDlpDcnnfFVvzMN0";
-        String googleMapsStaticEndPoint = "https://maps.googleapis.com/maps/api/staticmap?";
-        InputStream in = new URL(googleMapsStaticEndPoint + parameters).openStream();
+        String googleMapsStaticEndPoint = "https://maps.googleapis.com/maps/api/staticmap?Madison,WI&zoom=14&size=600x600" + urlLocations + "&key=AIzaSyBy_nDPQJnsmbKsZ0WSDlpDcnnfFVvzMN0";
+        System.out.println("my formatted endpoint:" + googleMapsStaticEndPoint);
+        InputStream in = new URL(googleMapsStaticEndPoint).openStream();
         //declares a random unique string to hold the value of the photo
         String fileName = UUID.randomUUID().toString() + ".PNG";
-        Files.copy(in, Paths.get("../../../webapp/maps" + fileName));
+        Path saveDestination = Paths.get("KeithsIndyProject/src/main/webapp/maps/" + fileName);
+        Files.copy(in, saveDestination, REPLACE_EXISTING);
         return fileName;
     }
 
@@ -33,13 +34,14 @@ public class Googlemaps {
     public String createLocationsString(List <Location> locations){
         String urlLocations = "";
         for (Location location : locations){
-            String label = location.getName();
+            String label = ".";
             String address = location.getAddress();
-            address.replace(' ', '+');
-            //TODO must replace all commas with empty
-            //address.replace(',', "-");
-            urlLocations = urlLocations + "&markers=color:red%7Clabel:" + label + "%7C" + address;
+            address = address.replace(",", "");
+            address = address.replace(' ', '+');
+            System.out.println(address);
+            urlLocations = urlLocations + "&markers=color:red|label:" + label + "|" + address;
         }
+        System.out.println("Upon leaving createLocationString, urlLocations=" +urlLocations);
         return urlLocations;
     }
     //example of working url

@@ -46,7 +46,8 @@ public class CreateUser extends HttpServlet {
         if (password.equals(passwordConfirmed)) {
             User user = new User(userName, firstName, lastName, email, password);
             userDao.addUser(user);
-            RequestDispatcher dispatcher = req.getRequestDispatcher("/AboutUs.jsp");
+            req.setAttribute("SuccessfulLogin", "Successfully created an account for: " + userName);
+            RequestDispatcher dispatcher = req.getRequestDispatcher("/login.jsp");
             dispatcher.forward(req, resp);
         } else {
             RequestDispatcher dispatcher = req.getRequestDispatcher("/createUserFailed.jsp");

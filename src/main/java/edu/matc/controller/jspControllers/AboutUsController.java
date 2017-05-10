@@ -26,13 +26,17 @@ public class AboutUsController extends HttpServlet {
         //Store photos/names/descriptions in categories
         logger.info("In the doGet()");
 
-        //TODO get all staff members
-
+        TeamDAO teamDAO = new TeamDAO();
         MsgsDAO MsgsDao = new MsgsDAO();
+
+
+        System.out.println("Here is the team" + teamDAO.getTeam());
+
 
         logger.info("about to get msg from tag");
         //TODO set the tag in a 'properties file'
         req.setAttribute("msg", MsgsDao.getMsg(2));
+        req.setAttribute("Team", teamDAO.getTeam());
         RequestDispatcher dispatcher = req.getRequestDispatcher("/AboutUs.jsp");
         dispatcher.forward(req, resp);
 

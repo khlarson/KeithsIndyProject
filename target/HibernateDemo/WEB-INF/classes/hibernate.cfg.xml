@@ -27,6 +27,7 @@
         <mapping class="edu.matc.entity.Location"/>
         <mapping class="edu.matc.entity.Sponsor"/>
         <mapping class="edu.matc.entity.Event"/>
+        <mapping class="edu.matc.entity.Team"/>
 
     </session-factory>
 

@@ -77,8 +77,10 @@
 </section>
 <!-- end home -->
 
-
-<!-- Sponsors should be grabbed from table and displayed in div HERE   -->
+<!-- msg if user creates an account -->
+<div>
+    <h4>${SuccessfulLogin}</h4>
+</div>
 
 
 <!-- start footer -->

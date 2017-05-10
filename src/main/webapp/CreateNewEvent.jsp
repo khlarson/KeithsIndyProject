@@ -65,11 +65,11 @@
             </select><br>
             Estimated Time:<br>
             <input type="text" name="approxomateTime" placeholder="00:00" style="text-align:center;"><br>
+            Choose Locations to Include:<br>
             <c:forEach var="location" items="${locations}" >
-                Choose Locations to Include:<br>
-                <input type="checkbox" name="location" value="${location}"> ${location.name}<br>
+                <input type="checkbox" name="location" value="${location.location_ID}"> ${location.name}<br>
             </c:forEach>
-            <INPUT TYPE="SUBMIT" VALUE="Continue and add locations to events">
+            <INPUT TYPE="SUBMIT" VALUE="Create Event!">
         </form>
         <br>
     </div>

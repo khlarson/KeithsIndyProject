@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>Events: ${event.category}</title>
+    <title>Events:</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -49,12 +49,19 @@
     </div>
 </div>
 <!-- end navigation -->
-
-<!-- start google map -->
-<div class="google_map">
-    <div id="map-canvas"></div>
-</div>
-<!-- end google map -->
+<section id="home" class="text-center">
+    <div class="templatemo_headerimage">
+        <div class="flexslider">
+            <ul class="slides">
+                <li>
+                    <!-- Image To be received from db -->
+                    <img src="images/MadisonBackground.jpg">
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!-- end home -->
 
 <!-- start portfolio -->
 <div id="portfolio">
@@ -68,18 +75,16 @@
                     <div class="iso-box-section">
                         <div class="iso-box-wrapper col4-iso-box">
 
-                            <c:forEach var="eventTypes" items="${eventTypes}" >
+                            <c:forEach var="event" items="${events}" >
                                 <div class="iso-box graphic photoshop wallpaper col-md-4 col-sm-6 col-xs-12">
 
                                     <div class="portfolio-thumb">
                                         <!--Photo should be recieved from db -->
-                                        <img src=${eventTypes.photo} class="fluid-img" alt="portfolio img">
+                                        <img src=${event.map} class="fluid-img" alt="portfolio img">
                                         <div class="portfolio-overlay">
                                             <!--when user clicks, must also pass the event ID -->
-                                            <a href="/jspControllers/SpecificEventCategoryController?category= ${eventTypes.id}">View these events</a>
-
-                                            <h4>${eventTypes.category}</h4>
-                                            <p>${eventTypes.description}</p>
+                                            <a href="/jspControllers/SpecificEventCategoryController?category= ${event.id}">Book a Trip!</a>
+                                            <p>${event.description}</p>
                                         </div>
                                     </div>
                                 </div>
