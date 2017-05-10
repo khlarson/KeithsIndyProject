@@ -79,7 +79,7 @@
 
 <!-- msg if user creates an account -->
 <div>
-    ${SuccessfulLogin}
+    <h4>${SuccessfulLogin}</h4>
 </div>
 
 

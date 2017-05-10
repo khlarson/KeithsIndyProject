@@ -29,9 +29,9 @@ create table User (
 CREATE USER 'tomcat'@'localhost' IDENTIFIED BY 'tomcat';
 
 create table user_roles (
-User_id         varchar(15) not null,
+user_id         varchar(15) not null,
 role_name         varchar(15) not null,
-primary key (user_name, role_name)
+primary key (user_id, role_name)
 );
 
 GRANT SELECT ON sample.* TO 'tomcat'@'localhost';
